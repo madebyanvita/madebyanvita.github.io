@@ -586,7 +586,7 @@ body { transition: background-color .4s var(--ease), color .4s var(--ease); }
    Hero portrait: sits on a brushstroke, cut off by a ruled line
    ========================================================================== */
 .hero-portrait { grid-column: 1 / -1; position: relative; margin: var(--s-4) 0 0 auto; width: min(72vw, 21rem); }
-.portrait-art { position: relative; isolation: isolate; border-bottom: 2px solid var(--ink); }
+.portrait-art { position: relative; isolation: isolate; }
 .portrait-art::before {               /* the lilac brushstroke behind the shoulders */
   content: ""; position: absolute; z-index: -1; left: -14%; right: -12%; top: 47%; height: 30%;
   background: url("../img/brush.svg") center / 100% 100% no-repeat; transform: rotate(-5deg);
@@ -687,3 +687,18 @@ body { transition: background-color .4s var(--ease), color .4s var(--ease); }
 @keyframes pf-float { from { transform: translateY(0); } to { transform: translateY(-5px); } }
 @keyframes pf-brush-in { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
 @keyframes pf-brush-drift { from { translate: 0 0; } to { translate: 7px -2px; } }
+
+/* ---------- Hero metadata: name + title left, availability right ---------- */
+.hero-meta {
+  display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start;
+  gap: var(--s-2) var(--s-4);
+  margin-bottom: clamp(1.75rem, 1rem + 3vw, 3.5rem);
+}
+.hero-meta p { display: grid; gap: .4rem; }
+.hm-name { font-size: var(--t-sm); font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--ink); line-height: 1.2; }
+.hm-title { font-size: var(--t-sm); color: var(--graphite-text); line-height: 1.35; }
+
+/* softer brushstroke behind the portrait (the headline brush is unchanged) */
+.portrait-art::before { opacity: .87; }
+/* even line lengths so the paragraph never ends on a lone word */
+.hero-statement { text-wrap: balance; }
