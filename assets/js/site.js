@@ -43,3 +43,33 @@
   }, { rootMargin: '-30% 0px -60% 0px' });
   Object.keys(map).forEach(function (id) { var el = document.getElementById(id); if (el) io.observe(el); });
 })();
+
+/* theme: system preference by default, the visitor's choice remembered */
+(function () {
+  var root = document.documentElement;
+  var btn = document.querySelector('.theme-toggle');
+  var meta = document.querySelector('meta[name="theme-color"]');
+  var mq = window.matchMedia('(prefers-color-scheme: dark)');
+  function stored() { try { return localStorage.getItem('theme'); } catch (e) { return null; } }
+  function apply(theme, fromToggle) {
+    var was = root.getAttribute('data-theme');
+    root.setAttribute('data-theme', theme);
+    if (meta) meta.setAttribute('content', theme === 'dark' ? '#1B1A18' : '#F4F1EB');
+    if (btn) {
+      btn.setAttribute('aria-pressed', String(theme === 'dark'));
+      btn.setAttribute('title', theme === 'dark' ? 'Lights on' : 'Lights off');
+    }
+    if (was === 'dark' && theme === 'light' && fromToggle) {   // sunglasses back on
+      root.classList.add('glasses-return');
+      setTimeout(function () { root.classList.remove('glasses-return'); }, 900);
+    }
+  }
+  apply(root.getAttribute('data-theme') || (mq.matches ? 'dark' : 'light'));
+  if (btn) btn.addEventListener('click', function () {
+    var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    try { localStorage.setItem('theme', next); } catch (e) {}
+    apply(next, true);
+  });
+  var onSystem = function (e) { if (!stored()) apply(e.matches ? 'dark' : 'light', true); };
+  if (mq.addEventListener) mq.addEventListener('change', onSystem); else if (mq.addListener) mq.addListener(onSystem);
+})();

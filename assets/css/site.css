@@ -13,6 +13,7 @@
   --graphite-text: #66615A;   /* small text on canvas (5.4:1) */
   --rule: #D6D0C6;
   --lilac: #B9A6D7;
+  --band: #242321;            /* dark editorial bands (experience, contact) */
   --on-ink: #F4F1EB;
   --on-ink-muted: #A39E95;    /* 5.9:1 on ink */
   --on-ink-rule: #3D3B38;
@@ -67,11 +68,11 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: .22em
 a:hover { text-decoration-color: var(--lilac); text-decoration-thickness: 3px; }
 :focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; border-radius: 1px; }
 .on-ink :focus-visible { outline-color: var(--lilac); }
-::selection { background: var(--lilac); color: var(--ink); }
+::selection { background: var(--lilac); color: #242321; }
 
 .skip {
   position: absolute; left: var(--s-2); top: -100px; z-index: 100;
-  background: var(--ink); color: var(--on-ink); padding: var(--s-1) var(--s-2);
+  background: var(--ink); color: var(--canvas); padding: var(--s-1) var(--s-2);
   font-weight: 600; text-decoration: none;
 }
 .skip:focus { top: var(--s-2); }
@@ -85,7 +86,7 @@ a:hover { text-decoration-color: var(--lilac); text-decoration-thickness: 3px; }
 .grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--col-gap); }
 .grid > * { grid-column: 1 / -1; }
 .section { padding-block: var(--s-7); }
-.on-ink { background: var(--ink); color: var(--on-ink); }
+.on-ink { background: var(--band); color: var(--on-ink); }
 
 /* ---------- Components ---------- */
 
@@ -115,7 +116,7 @@ a:hover { text-decoration-color: var(--lilac); text-decoration-thickness: 3px; }
 .btn {
   display: inline-flex; align-items: center; gap: .6em;
   padding: .9em 1.35em; font: 600 var(--t-sm)/1 var(--font-ui); letter-spacing: .01em;
-  background: var(--ink); color: var(--on-ink); text-decoration: none;
+  background: var(--ink); color: var(--canvas); text-decoration: none;
   border: 1px solid var(--ink);
   transition: background-color .2s var(--ease), color .2s var(--ease);
 }
@@ -353,7 +354,7 @@ body { counter-reset: sec 1; }
 .cover--kiosk   .cover-brush { width: 62%; height: 38%; right: -6%; top: 14%; transform: rotate(-4deg); }
 .cover--order   .cover-brush { width: 78%; height: 30%; left: 10%; top: 30%; transform: rotate(3deg); }
 .cover--variant .cover-brush { width: 54%; height: 46%; right: 4%; top: 8%; transform: rotate(-9deg); }
-.cover--systems { background: var(--ink); color: var(--on-ink); }
+.cover--systems { background: var(--band); color: var(--on-ink); }
 .cover--systems .cover-brush { width: 70%; height: 22%; left: 18%; top: 22%; }
 @media (prefers-reduced-motion: no-preference) {
   .project:hover .cover-word { transform: translate(.05em, -.04em); }
@@ -540,3 +541,149 @@ details[open] .tl-toggle::after { transform: rotate(0deg); }
 .pager--two .next { text-align: right; justify-items: end; }
 .big-figs { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: var(--s-4) var(--col-gap); }
 .cs-facts--inline { margin-top: 0; }
+
+/* ==========================================================================
+   Dark theme: the contact band's charcoal, ivory and lilac, applied to the page
+   ========================================================================== */
+:root { color-scheme: light; }
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --canvas: #1B1A18; --paper: #262420; --ink: #EEE9E1;
+  --graphite: #7E786F; --graphite-text: #ABA59B; --rule: #3A3733;
+  --band: #111010; --on-ink-rule: #2E2C29;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --canvas: #1B1A18; --paper: #262420; --ink: #EEE9E1;
+    --graphite: #7E786F; --graphite-text: #ABA59B; --rule: #3A3733;
+    --band: #111010; --on-ink-rule: #2E2C29;
+  }
+}
+:root[data-theme="dark"] .todo { background: #4A3F1A; color: #FFE8A3; }
+body { transition: background-color .4s var(--ease), color .4s var(--ease); }
+
+/* theme toggle */
+.theme-toggle {
+  display: inline-grid; place-items: center; width: 2.5rem; height: 2.5rem; margin-right: -.5rem;
+  background: none; border: 0; color: var(--ink); cursor: pointer; border-radius: 50%;
+}
+.theme-toggle:hover { background: color-mix(in srgb, var(--lilac) 35%, transparent); }
+.theme-toggle svg { width: 1.6rem; height: 1rem; overflow: visible; }
+.theme-toggle .tt-lens { fill: currentColor; transition: fill-opacity .3s var(--ease); }
+.theme-toggle .tt-frame { fill: none; stroke: currentColor; stroke-width: 1.6; }
+[data-theme="dark"] .theme-toggle .tt-lens { fill-opacity: 0; }
+.site-header .wrap { gap: var(--s-2); }
+.header-end { display: flex; align-items: center; gap: clamp(.75rem, 2.4vw, 2rem); }
+@media (max-width: 36rem) {
+  .header-end { display: contents; }
+  .wordmark { order: 1; }
+  .theme-toggle { order: 2; margin-left: auto; }
+  .site-nav { order: 3; }
+}
+
+/* ==========================================================================
+   Hero portrait: sits on a brushstroke, cut off by a ruled line
+   ========================================================================== */
+.hero-portrait { grid-column: 1 / -1; position: relative; margin: var(--s-4) 0 0 auto; width: min(72vw, 21rem); }
+.portrait-art { position: relative; isolation: isolate; border-bottom: 2px solid var(--ink); }
+.portrait-art::before {               /* the lilac brushstroke behind the shoulders */
+  content: ""; position: absolute; z-index: -1; left: -14%; right: -12%; top: 47%; height: 30%;
+  background: url("../img/brush.svg") center / 100% 100% no-repeat; transform: rotate(-5deg);
+}
+.portrait-svg { display: block; width: 100%; height: auto; }
+.portrait-cap { margin-top: .6rem; font-family: var(--font-display); font-style: italic; font-size: var(--t-sm); color: var(--graphite-text); }
+.portrait-cap .cap-dark { display: none; }
+[data-theme="dark"] .portrait-cap .cap-light { display: none; }
+[data-theme="dark"] .portrait-cap .cap-dark { display: inline; }
+.pt-rim { opacity: 0; transition: opacity .6s var(--ease); }
+[data-theme="dark"] .pt-rim { opacity: .9; }
+.glasses { transform-box: fill-box; transform-origin: 50% 50%; }
+
+@media (min-width: 72rem) {
+  .headline { grid-column: 1 / 9; }
+  .hero-portrait { grid-column: 9 / -1; grid-row: 1; align-self: center; width: 100%; max-width: 24rem; margin: 0 0 0 auto; }
+}
+
+/* sunglasses: on in the light, off in the dark */
+@media (prefers-reduced-motion: no-preference) {
+  [data-theme="dark"] .glasses { animation: glasses-off 1.5s .5s var(--ease) both; }
+  .glasses-return .glasses { animation: glasses-on .75s var(--ease) both; }
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-theme="dark"] .glasses { opacity: 0; }
+}
+@keyframes glasses-off {
+  0%   { transform: none; opacity: 1; }
+  28%  { transform: translateY(16px) rotate(-3deg); opacity: 1; }   /* slide down the nose: a peek */
+  48%  { transform: translateY(16px) rotate(-3deg); opacity: 1; }
+  100% { transform: translate(70px, -190px) rotate(-26deg); opacity: 0; }
+}
+@keyframes glasses-on {
+  0%   { transform: translate(0, -160px) rotate(10deg); opacity: 0; }
+  70%  { transform: translateY(5px); opacity: 1; }
+  100% { transform: none; opacity: 1; }
+}
+/* "meaning" stays charcoal on the lilac brush in both themes (ivory on lilac is ~1.6:1) */
+.w-meaning { color: #242321; }
+/* keep the brushstroke from causing sideways scroll; smaller portrait on phones so the headline leads */
+.hero { overflow-x: clip; }
+@media (max-width: 71.99rem) {
+  .hero-portrait { width: min(58vw, 17rem); margin-top: var(--s-3); }
+}
+/* dark mode: solid brush behind "meaning" (the streak texture lets charcoal show through behind charcoal text) */
+[data-theme="dark"] .brush path { filter: url(#brush-solid); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .brush path { filter: url(#brush-solid); } }
+[data-theme="dark"] .brush { top: .04em; bottom: auto; height: 1.1em; right: auto; width: calc(100% + .34em); max-width: none; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .brush { top: .04em; bottom: auto; height: 1.1em; right: auto; width: calc(100% + .34em); max-width: none; } }
+
+/* ==========================================================================
+   Hero portrait: layered editorial illustration
+   base (sunglasses-off art, sticker removed) · hair-breeze copy · sunglasses layer
+   ========================================================================== */
+.portrait-figure {
+  position: relative;
+  translate: 8.06% 7%;                      /* centre the figure as before; lower it so the fade meets the rule */
+  /* sit on the ruled line: soften the bottom where the old circle cut the shoulders */
+  -webkit-mask-image: linear-gradient(to bottom, #000 64%, transparent 90%);
+          mask-image: linear-gradient(to bottom, #000 64%, transparent 90%);
+}
+.portrait-figure img { display: block; }
+.pf-base { width: 100%; height: auto; }
+.pf-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+/* hair breeze (experimental): a displaced copy of the art, shown only over the outer hair */
+.pf-breeze {
+  position: absolute; inset: 0; width: 100%; height: auto; pointer-events: none;
+  filter: url(#hair-breeze);
+  -webkit-mask-image: radial-gradient(ellipse 27% 44% at 45% 50%, transparent 62%, #000 100%);
+          mask-image: radial-gradient(ellipse 27% 44% at 45% 50%, transparent 62%, #000 100%);
+}
+
+/* sunglasses: their own layer, placed over the eyes (light), pushed up into the hair (dark) */
+.pf-glasses {
+  position: absolute; left: 31.34%; top: 30.44%; width: 32.02%; height: auto;
+  transform-origin: 50% 60%;
+  translate: 0 0; rotate: 0deg; scale: 1;
+  transition:
+    translate 1.15s cubic-bezier(.62, 0, .24, 1),
+    rotate    1.15s cubic-bezier(.5, 0, .3, 1) .06s,
+    scale     1.15s cubic-bezier(.62, 0, .24, 1);
+}
+[data-theme="dark"] .pf-glasses { translate: 0 -143%; rotate: -7deg; scale: .94 .84; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .pf-glasses { translate: 0 -143%; rotate: -7deg; scale: .94 .84; }
+}
+
+/* subtle life: only when the visitor hasn't asked for less motion */
+@media (prefers-reduced-motion: no-preference) {
+  .portrait-figure { animation: pf-float 8s ease-in-out infinite alternate; }
+  .portrait-art::before { animation: pf-brush-in 1s .35s var(--ease) both, pf-brush-drift 14s 1.4s ease-in-out infinite alternate; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pf-breeze { display: none; }
+  .pf-glasses { transition: none; }
+}
+@keyframes pf-float { from { transform: translateY(0); } to { transform: translateY(-5px); } }
+@keyframes pf-brush-in { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+@keyframes pf-brush-drift { from { translate: 0 0; } to { translate: 7px -2px; } }
