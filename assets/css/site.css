@@ -702,3 +702,19 @@ body { transition: background-color .4s var(--ease), color .4s var(--ease); }
 .portrait-art::before { opacity: .78; }
 /* even line lengths so the paragraph never ends on a lone word */
 .hero-statement { text-wrap: balance; }
+
+/* ---------- Impact ledger refinement ----------
+   figures hang in the label column; descriptions start on the heading's left edge */
+.ledger-row dt { font-weight: 500; color: var(--ink); }
+.ledger-row .src { line-height: 1.4; }
+@media (min-width: 56rem) {
+  .ledger-row .fig { grid-column: 1 / 4; }
+  .ledger-row dt   { grid-column: 4 / 9; }
+  .ledger-row .src { grid-column: 9 / -1; }
+}
+@media (max-width: 47.99rem) {
+  .ledger-row { row-gap: .35rem; padding-block: 1.25rem; }
+  .ledger-row .src { margin-top: .15rem; }
+}
+@media (max-width: 47.99rem) { .impact .section-head { margin-bottom: var(--s-4); } }
+#impact .section-intro { text-wrap: pretty; }
