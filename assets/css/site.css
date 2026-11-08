@@ -588,7 +588,7 @@ body { transition: background-color .4s var(--ease), color .4s var(--ease); }
 .hero-portrait { grid-column: 1 / -1; position: relative; margin: var(--s-4) 0 0 auto; width: min(72vw, 21rem); }
 .portrait-art { position: relative; isolation: isolate; }
 .portrait-art::before {               /* the lilac brushstroke behind the shoulders */
-  content: ""; position: absolute; z-index: -1; left: -14%; right: -12%; top: 47%; height: 30%;
+  content: ""; position: absolute; z-index: -1; left: -9%; right: -7%; top: 47%; height: 30%;
   background: url("../img/brush.svg") center / 100% 100% no-repeat; transform: rotate(-5deg);
 }
 .portrait-svg { display: block; width: 100%; height: auto; }
@@ -602,7 +602,7 @@ body { transition: background-color .4s var(--ease), color .4s var(--ease); }
 
 @media (min-width: 72rem) {
   .headline { grid-column: 1 / 9; }
-  .hero-portrait { grid-column: 9 / -1; grid-row: 1; align-self: center; width: 100%; max-width: 24rem; margin: 0 0 0 auto; }
+  .hero-portrait { grid-column: 9 / -1; grid-row: 1; align-self: center; width: 100%; max-width: 21.25rem; margin: 0 0 0 auto; }
 }
 
 /* sunglasses: on in the light, off in the dark */
@@ -699,6 +699,6 @@ body { transition: background-color .4s var(--ease), color .4s var(--ease); }
 .hm-title { font-size: var(--t-sm); color: var(--graphite-text); line-height: 1.35; }
 
 /* softer brushstroke behind the portrait (the headline brush is unchanged) */
-.portrait-art::before { opacity: .87; }
+.portrait-art::before { opacity: .78; }
 /* even line lengths so the paragraph never ends on a lone word */
 .hero-statement { text-wrap: balance; }
