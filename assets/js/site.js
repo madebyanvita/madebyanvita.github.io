@@ -73,3 +73,70 @@
   var onSystem = function (e) { if (!stored()) apply(e.matches ? 'dark' : 'light', true); };
   if (mq.addEventListener) mq.addEventListener('change', onSystem); else if (mq.addListener) mq.addListener(onSystem);
 })();
+
+/* click-to-load embeds (e.g. Figma prototypes): nothing loads until asked */
+(function () {
+  document.querySelectorAll('[data-embed]').forEach(function (box) {
+    var btn = box.querySelector('button');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var f = document.createElement('iframe');
+      f.src = box.getAttribute('data-embed');
+      f.title = box.getAttribute('data-embed-title') || 'Embedded content';
+      f.setAttribute('allowfullscreen', '');
+      box.classList.add('is-loaded');
+      box.replaceChildren(f);
+      f.focus();
+    });
+  });
+})();
+
+/* click-to-expand images in case studies; before/after pairs open together */
+(function () {
+  var imgs = document.querySelectorAll('.cs-figure img');
+  if (!imgs.length || typeof HTMLDialogElement === 'undefined') return;
+  var dlg = document.createElement('dialog');
+  dlg.className = 'lightbox';
+  dlg.setAttribute('aria-label', 'Expanded image');
+  dlg.innerHTML = '<button class="lightbox-close" type="button" aria-label="Close">×</button><div class="lightbox-stage"></div><p class="lightbox-hint"></p>';
+  document.body.appendChild(dlg);
+  var stage = dlg.querySelector('.lightbox-stage'), hint = dlg.querySelector('.lightbox-hint');
+  function setHint() { hint.textContent = dlg.classList.contains('is-zoomed') ? 'Click to fit · Esc to close' : 'Click image for full size · Esc to close'; }
+  function close() { dlg.close(); }
+  dlg.querySelector('.lightbox-close').addEventListener('click', close);
+  dlg.addEventListener('click', function (e) {
+    if (e.target.tagName === 'IMG') { dlg.classList.toggle('is-zoomed'); setHint(); return; }
+    if (e.target === dlg || e.target === stage || e.target.classList.contains('lightbox-pair')) close();
+  });
+  dlg.addEventListener('close', function () { document.documentElement.classList.remove('has-lightbox'); stage.replaceChildren(); if (dlg._from) dlg._from.focus(); });
+  function shot(img, label) {
+    var fig = document.createElement('figure');
+    if (label) { var t = document.createElement('figcaption'); t.textContent = label; fig.appendChild(t); }
+    var i = document.createElement('img'); i.src = img.currentSrc || img.src; i.alt = img.alt; fig.appendChild(i);
+    return fig;
+  }
+  imgs.forEach(function (img) {
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'zoomable';
+    var pair = img.closest('.ba-pair');
+    b.setAttribute('aria-label', pair ? 'Expand before and after' : 'Expand image: ' + (img.alt || ''));
+    img.parentNode.insertBefore(b, img); b.appendChild(img);
+    b.addEventListener('click', function () {
+      stage.replaceChildren();
+      if (pair) {
+        var wrap = document.createElement('div'); wrap.className = 'lightbox-pair';
+        pair.querySelectorAll('figure').forEach(function (f) {
+          var t = f.querySelector('.ba-tag'); wrap.appendChild(shot(f.querySelector('img'), t ? t.textContent : ''));
+        });
+        var cap = pair.querySelector('.ba-cap');
+        if (cap) { var p = document.createElement('p'); p.className = 'lightbox-cap'; p.innerHTML = cap.innerHTML; wrap.appendChild(p); }
+        stage.appendChild(wrap);
+      } else {
+        stage.appendChild(shot(img, ''));
+      }
+      dlg.classList.remove('is-zoomed'); setHint(); dlg._from = b;
+      document.documentElement.classList.add('has-lightbox');
+      dlg.showModal(); stage.scrollTo(0, 0);
+    });
+  });
+})();
