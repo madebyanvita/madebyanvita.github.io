@@ -1003,3 +1003,80 @@ body { transition: background-color .4s var(--ease), color .4s var(--ease); }
 .project-status.is-live::before { display: none; }
 .project-status.is-live .arrow { transition: transform .3s var(--ease); }
 .project:has(.project-link):hover .project-status.is-live .arrow { transform: translateX(.25em); }
+
+/* Flat brand-colour covers with a centred icon */
+.cover--flat { display: grid; place-items: center; --cv-bg: #C8102E; --cv-fg: #F6ECDF; background: var(--cv-bg); color: var(--cv-fg); }
+.cover--flat.cover--kiosk   { --cv-bg: #C8102E; }
+.cover--flat.cover--order   { --cv-bg: #EADBC6; --cv-fg: #5A2A1E; }
+.cover--flat.cover--variant { --cv-bg: #8E1B24; }
+.cover--flat.cover--systems { --cv-bg: #242321; }
+:root[data-theme="dark"] .cover--flat.cover--kiosk   { --cv-bg: #A50F27; }
+:root[data-theme="dark"] .cover--flat.cover--order   { --cv-bg: #CDBBA2; }
+:root[data-theme="dark"] .cover--flat.cover--variant { --cv-bg: #741820; }
+:root[data-theme="dark"] .cover--flat.cover--systems { --cv-bg: #34312D; }
+.cover-icon { width: auto; height: 52%; display: block; filter: drop-shadow(0 10px 18px rgba(0,0,0,.18)); transition: transform .6s var(--ease); }
+.project--minor .cover-icon { height: 56%; }
+.cover-tag { position: absolute; left: 0; right: 0; bottom: 1rem; text-align: center; font: 700 var(--t-xs)/1 var(--font-ui); letter-spacing: .14em; text-transform: uppercase; opacity: .9; }
+.cover--flat .cover-no { color: inherit; opacity: .8; }
+@media (prefers-reduced-motion: no-preference) { .project:hover .cover-icon { transform: translateY(-4px) scale(1.03); } }
+
+/* Card icon animations: play once on scroll-in, again on hover/focus (.play is toggled by site.js) */
+.cover-icon * { transform-box: fill-box; transform-origin: center; }
+@media (prefers-reduced-motion: no-preference) {
+  /* Kiosk: the screen "loads", the pay button pulses, the card reader blinks green */
+  .play .k-bar  { animation: cv-pop .45s var(--ease) both; }
+  .play .k-tile { animation: cv-pop .5s cubic-bezier(.34,1.56,.64,1) both; animation-delay: calc(.12s + var(--i) * .1s); }
+  .play .k-pay  { animation: cv-pulse .6s ease-in-out .65s 2; }
+  .play .k-led  { animation: cv-led 1.4s steps(1) .9s both; }
+  /* Order Again: the cup wiggles, the repeat arrow spins, a little steam */
+  .o-cup { transform-origin: 50% 100%; }
+  .play .o-cup   { animation: cv-wiggle .8s ease-in-out both; }
+  .play .o-arrow { animation: cv-spin .9s cubic-bezier(.65,0,.35,1) .15s both; }
+  .play .o-steam { animation: cv-steam 1.4s ease-out .3s both; }
+  /* Variant Reset: cups hop in size order, then the tick draws */
+  .v-cup { transform-origin: 50% 100%; }
+  .play .v-cup   { animation: cv-hop .5s cubic-bezier(.34,1.56,.64,1) both; animation-delay: calc(var(--i) * .12s); }
+  .play .v-check { animation: cv-pop .45s cubic-bezier(.34,1.56,.64,1) .45s both; }
+  .v-tick { stroke-dasharray: 1; }
+  .play .v-tick  { animation: cv-draw .35s ease-out .75s both; }
+  /* Design systems: the blocks shuffle and settle */
+  .play .s-sq { animation: cv-turn .7s cubic-bezier(.65,0,.35,1) both; }
+  .play .s-ci { animation: cv-hop .55s cubic-bezier(.34,1.56,.64,1) .1s both; }
+  .play .s-pi { animation: cv-slide .6s cubic-bezier(.34,1.56,.64,1) .2s both; }
+  .play .s-tr { animation: cv-turn3 .7s cubic-bezier(.65,0,.35,1) .25s both; }
+}
+@keyframes cv-pop    { from { transform: scale(.4); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+@keyframes cv-pulse  { 50% { transform: scale(1.08); } }
+@keyframes cv-led    { 0%, 30%, 60% { fill: #3FB37A; } 15%, 45%, 100% { fill: #F6ECDF; } }
+@keyframes cv-wiggle { 20% { transform: rotate(-6deg); } 45% { transform: rotate(5deg); } 70% { transform: rotate(-2deg); } 100% { transform: none; } }
+@keyframes cv-spin   { from { transform: rotate(0); } to { transform: rotate(-360deg); } }
+@keyframes cv-steam  { 0% { opacity: 0; transform: translateY(6px); } 40% { opacity: .7; } 100% { opacity: 0; transform: translateY(-8px); } }
+@keyframes cv-hop    { 40% { transform: translateY(-14%); } 70% { transform: translateY(2%); } 100% { transform: none; } }
+@keyframes cv-draw   { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+@keyframes cv-turn   { from { transform: rotate(-90deg) scale(.8); } to { transform: none; } }
+@keyframes cv-turn3  { from { transform: rotate(120deg) scale(.8); } to { transform: none; } }
+@keyframes cv-slide  { from { transform: translateX(-30%); opacity: 0; } to { transform: none; opacity: 1; } }
+
+/* Case study: numbers count up */
+.cs-stats dd.is-counting { font-variant-numeric: tabular-nums; }
+
+/* Case study: "Closing the loop" line draws Observed → Designed → Shipped */
+.loop li::before { content: ""; position: absolute; left: 0; right: 0; top: -2px; height: 2px; background: currentColor; transform-origin: left center; }
+.loop li:last-child::before { background: var(--lilac); }
+@media (prefers-reduced-motion: no-preference) {
+  html:not(.no-js) .loop:not(.is-drawn) li { border-top-color: transparent; }
+  html:not(.no-js) .loop:not(.is-drawn) li::before { transform: scaleX(0); }
+  html:not(.no-js) .loop:not(.is-drawn) li::after { opacity: 0; }
+  .loop.is-drawn li { border-top-color: transparent; }
+  .loop.is-drawn li::before { animation: loop-draw .55s cubic-bezier(.65,0,.35,1) both; }
+  .loop.is-drawn li:nth-child(2)::before { animation-delay: .5s; }
+  .loop.is-drawn li:nth-child(3)::before { animation-delay: 1s; }
+  .loop.is-drawn li::after { animation: loop-fade .3s ease-out both; }
+  .loop.is-drawn li:nth-child(1)::after { animation-delay: .5s; }
+  .loop.is-drawn li:nth-child(2)::after { animation-delay: 1s; }
+}
+@keyframes loop-draw { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes loop-fade { from { opacity: 0; } to { opacity: 1; } }
+
+/* Case study: reading-progress line along the top edge */
+.read-progress { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 60; background: var(--lilac); transform-origin: left center; transform: scaleX(0); pointer-events: none; }

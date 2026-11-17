@@ -140,3 +140,71 @@
     });
   });
 })();
+
+/* Card cover icons: play a short animation when the card scrolls into view, and again on hover or focus */
+(function () {
+  var covers = document.querySelectorAll('.cover--flat');
+  if (!covers.length) return;
+  function play(c) { c.classList.remove('play'); void c.offsetWidth; c.classList.add('play'); }
+  covers.forEach(function (c) {
+    var card = c.closest('.project') || c;
+    card.addEventListener('mouseenter', function () { play(c); });
+    card.addEventListener('focusin', function () { play(c); });
+  });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { play(e.target); io.unobserve(e.target); } });
+    }, { threshold: 0.5 });
+    covers.forEach(function (c) { io.observe(c); });
+  }
+})();
+
+/* Case study: subtle motion (count-up numbers, the "Closing the loop" line, reading progress) */
+(function () {
+  if (!document.body.classList.contains('case')) return;
+  var still = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var seen = function (els, cb, threshold) {
+    if (!('IntersectionObserver' in window)) { els.forEach(cb); return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { cb(e.target); io.unobserve(e.target); } });
+    }, { threshold: threshold || 0.4 });
+    els.forEach(function (el) { io.observe(el); });
+  };
+
+  // 1. Top numbers count up once
+  var dds = [].slice.call(document.querySelectorAll('.cs-impact .cs-stats dd'));
+  if (!still) seen(dds, function (dd) {
+    var node = dd.firstChild;
+    if (!node || node.nodeType !== 3) return;
+    var end = parseInt(node.nodeValue, 10);
+    if (!(end > 1)) return;
+    var t0 = null, dur = 1100;
+    dd.classList.add('is-counting');
+    (function step(t) {
+      if (t0 === null) t0 = t;
+      var p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 3);
+      node.nodeValue = String(Math.round(end * e));
+      if (p < 1) requestAnimationFrame(step); else dd.classList.remove('is-counting');
+    })(performance.now());
+    node.nodeValue = '0';
+  }, 0.6);
+
+  // 2. "Closing the loop" draws in when it scrolls into view
+  seen([].slice.call(document.querySelectorAll('.loop')), function (el) { el.classList.add('is-drawn'); }, 0.6);
+
+  // 3. Reading-progress line
+  var article = document.querySelector('main') || document.body;
+  var bar = document.createElement('div');
+  bar.className = 'read-progress'; bar.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(bar);
+  var ticking = false;
+  function update() {
+    ticking = false;
+    var r = article.getBoundingClientRect(), total = r.height - innerHeight;
+    var p = total > 0 ? Math.min(1, Math.max(0, -r.top / total)) : 1;
+    bar.style.transform = 'scaleX(' + p + ')';
+  }
+  addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+  addEventListener('resize', update);
+  update();
+})();
