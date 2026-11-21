@@ -1204,3 +1204,8 @@ body { transition: background-color .4s var(--ease), color .4s var(--ease); }
 .fx-video--device { max-width: 17rem; }
 .fx-video--device .device { width: 100%; }
 .fx-video--device figcaption { text-align: center; margin-top: 1rem; }
+/* Impact ledger: figures right-aligned so every number ends on the same line, labels share one baseline */
+@media (min-width: 56rem) {
+  .ledger-row .fig { text-align: right; padding-right: clamp(1rem, 3vw, 3rem); }
+
+}
