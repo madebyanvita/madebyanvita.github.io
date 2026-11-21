@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en-CA" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Order Again · Anvita Sodhi</title>
+<meta name="description" content="Case study: how usage data led Anvita and her PM to remove Favourites from the Tim Hortons app and rebuild reordering as one Order Again experience. Conversion rose from 59.1% to 62.7%.">
+<link rel="canonical" href="https://madebyanvita.github.io/work/order-again.html">
+<meta name="theme-color" content="#F4F1EB">
+<script>(function(){var t;try{t=localStorage.getItem("theme")}catch(e){}document.documentElement.setAttribute("data-theme",t||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"))})()</script>
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Anvita Sodhi">
+<meta property="og:title" content="Order Again: the feature we removed to make reordering faster">
+<meta property="og:description" content="Removing Favourites from the Tim Hortons app. Conversion 59.1% → 62.7%, 20% less drop-off.">
+<meta property="og:url" content="https://madebyanvita.github.io/work/order-again.html">
+<meta property="og:image" content="https://madebyanvita.github.io/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/site.css?v=62c69646">
+<script src="../assets/js/site.js?v=f9daf052" defer></script>
+</head>
+<body class="case">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="../">Anvita Sodhi</a>
+    <div class="header-end">
+    <nav class="site-nav" aria-label="Primary">
+      <a href="../#work" aria-current="page">Work</a>
+      <a href="../#experience">Experience</a>
+      <a href="../#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Dark mode" title="Lights off"><svg viewBox="0 0 26 12" aria-hidden="true"><rect class="tt-lens" x="1" y="1.5" width="10" height="8.5" rx="3.6"/><rect class="tt-lens" x="15" y="1.5" width="10" height="8.5" rx="3.6"/><rect class="tt-frame" x="1" y="1.5" width="10" height="8.5" rx="3.6"/><rect class="tt-frame" x="15" y="1.5" width="10" height="8.5" rx="3.6"/><path class="tt-frame" d="M11 4.5 C 12 3, 14 3, 15 4.5"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <!-- INTRO -->
+  <section class="cs-hero">
+    <div class="wrap">
+      <p class="cs-crumb"><a href="../#work">← All work</a></p>
+      <div class="cs-hero-split">
+        <div class="cs-hero-text">
+        <p class="label cs-kicker">Case study 02 · Tim Hortons · Mobile ordering</p>
+        <h1 class="cs-title">Order Again: the feature <em>we chose to remove.</em></h1>
+        <p class="cs-lede">The Tim Hortons app gave returning guests two ways to reorder: Recents and Favourites. Usage data showed one was doing the job and the other was adding work. With my PM, I made the call to remove Favourites and rebuild reordering as a single Order Again experience. After rollout, conversion rose from 59.1% to 62.7% and drop-off on reorder screens fell by 20%.</p>
+        </div>
+        <figure class="cs-hero-media cs-hero-media--phone">
+          <div class="device"><img src="../assets/img/work/order-again/hero-screen.jpg?v=b097bc8a" alt="The shipped Order again tab: past items with their modifiers, each with a plus button to add it to the cart" width="750" height="1624" fetchpriority="high"></div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS UP FRONT -->
+  <section class="wrap cs-impact" aria-label="Impact">
+    <dl class="cs-stats cs-stats--4">
+      <div><dt>Order conversion, from 59.1% to 62.7%</dt><dd>+3.6<small>pts</small></dd></div>
+      <div><dt>Drop-off on reorder screens, from 9.3% to 7.4%</dt><dd>−20<small>%</small></dd></div>
+      <div><dt>Faster on the reorder screen, from 47s to 27s</dt><dd>~20<small>s</small></dd></div>
+      <div><dt>Reorder tabs, down from two</dt><dd>1</dd></div>
+    </dl>
+    <dl class="cs-facts">
+      <div><dt>Role</dt><dd>Lead product designer: research and data review with the PM, UX/UI, design-system component</dd></div>
+      <div><dt>Team</dt><dd>1 PM, 3 engineers and a copywriter</dd></div>
+      <div><dt>Scope</dt><dd>Recents and Favourites, the reorder flow, edge states, design-system alignment</dd></div>
+      <div><dt>Shipped</dt><dd>November 2025, in a four-phase rollout to 100% of guests</dd></div>
+    </dl>
+  </section>
+
+  <!-- DECISIONS I OWNED -->
+  <section class="cs-glance" aria-labelledby="owned-title">
+    <div class="wrap">
+      <h2 id="owned-title" class="label">Three decisions I drove</h2>
+      <ol class="owned">
+        <li>
+          <p class="owned-n">01</p>
+          <h3>Remove Favourites</h3>
+          <p>Recents was used three times as often. With my PM, I made the case to retire a whole feature instead of polishing two.</p>
+          <a class="owned-link" href="#remove">The removal call →</a>
+        </li>
+        <li>
+          <p class="owned-n">02</p>
+          <h3>Items, not orders</h3>
+          <p>I brought four directions to the team. Data showed more guests re-add single items than whole orders, so we built for items.</p>
+          <a class="owned-link" href="#directions">The four directions →</a>
+        </li>
+        <li>
+          <p class="owned-n">03</p>
+          <h3>A card sized by data</h3>
+          <p>97% of product names fit in two lines in English and French. That set the card spec, and the card became a design-system component.</p>
+          <a class="owned-link" href="#card">The card →</a>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <div class="wrap cs-layout">
+    <nav class="cs-toc" aria-label="On this page">
+      <p class="label">On this page</p>
+      <ol>
+        <li><a href="#mess">The mess</a></li>
+        <li><a href="#meaning">The meaning</a></li>
+        <li><a href="#work-act">The work</a></li>
+        <li><a href="#proof">The proof</a></li>
+        <li><a href="#learnings">Learnings</a></li>
+        <li><a href="#next">What's next</a></li>
+      </ol>
+    </nav>
+
+    <article class="cs-body">
+      <!-- ACT I -->
+      <section class="act" id="mess" aria-labelledby="mess-title">
+        <header class="act-head"><p class="label">Act I</p><h2 id="mess-title">The <em>mess.</em></h2></header>
+
+        <h3>Two tabs, one job</h3>
+        <p>Returning guests are the most valuable guests in any ordering app. They already know what they want and they're already motivated to order. The only thing between them and a completed order is how quickly the app gets out of their way.</p>
+        <p>The Tim Hortons app gave them two ways back to what they love: <b>Recents</b>, a log of past orders, and <b>Favourites</b>, a list guests saved by hand. On paper both served the same goal. In practice they split one job across two tabs, asked guests to keep two mental models of their order history, and made Favourites a list guests had to curate to keep useful. Most weren't doing that work.</p>
+        <figure class="cs-figure screens-fig">
+          <div class="screens">
+            <div class="screen-item"><span class="screen-label">Recents</span><img class="screen" src="../assets/img/work/order-again/before-recents.jpg?v=abda48c1" alt="The old Recents tab: past orders listed by date, each with a Reorder button, heart icons and items with modifiers" width="375" height="811" loading="lazy"></div>
+            <div class="screen-item"><span class="screen-label">Favourites</span><img class="screen" src="../assets/img/work/order-again/before-favs.jpg?v=7ea578cb" alt="The old Favourites tab: saved orders with Order Now, Edit and Remove" width="375" height="811" loading="lazy"></div>
+          </div>
+          <figcaption>Before: two tabs doing the same job.</figcaption>
+        </figure>
+
+        <h3>What the data showed</h3>
+        <dl class="cs-stats cs-stats--4 data-stats">
+          <div><dt>Of menu visitors went to Recents, against 8% for Favourites</dt><dd>24<small>%</small></dd></div>
+          <div><dt>Of guests dropped off at the first step</dt><dd>23<small>%</small></dd></div>
+          <div><dt>Cart retention from Recents/Favourites, against 93% on the Order Again path</dt><dd>77<small>%</small></dd></div>
+          <div><dt>Average time on the old screen, against 27s on the Order Again path</dt><dd>47<small>s</small></dd></div>
+        </dl>
+        <p class="pull">Guests were searching, not finding.</p>
+
+        <h3>What success meant</h3>
+        <p>Three outcomes defined success: one for guests, one for the business and one for the team maintaining the product.</p>
+        <ol class="priorities priorities--grid">
+          <li><b>Reduce guest confusion.</b> One clear, fast path to reorder instead of two tabs doing the same job.</li>
+          <li><b>Make reordering faster.</b> Fewer steps from intent to cart, measured in speed and drop-off.</li>
+          <li><b>Streamline the codebase.</b> Stop maintaining two parallel reorder systems and free engineering time for higher-value work.</li>
+        </ol>
+        <p class="goal"><span class="label">The questions we set out to answer</span>How might we reduce clutter without removing value for guests who used Favourites? And how might Recents carry the best of both: convenience and speed?</p>
+      </section>
+
+      <!-- ACT II -->
+      <section class="act" id="meaning" aria-labelledby="meaning-title">
+        <header class="act-head"><p class="label">Act II</p><h2 id="meaning-title">The <em>meaning.</em></h2></header>
+
+        <h3 id="remove">The insight: your favourites are already in your Recents</h3>
+        <p>My PM brought the usage data and we read it together, starting from one question: if two tabs do the same job, which one are guests actually using? The answer was unambiguous. Recents was used three times as often, and guests ordering through it finished faster.</p>
+        <p>That told us two things. Favourites wasn't delivering enough value to justify itself, and Recents was already doing Favourites' job, because the things guests truly love and reorder show up there on their own. We were asking guests to maintain a list the app could maintain for them.</p>
+
+        <h3>Making the call</h3>
+        <p>Removing a feature guests can see is a harder sell than adding one, so we weighed the case for keeping it honestly. The strongest argument was that Favourites could feel less cluttered for guests who reorder the same few items. Against that: 92% of guests weren't using Favourites regularly, the exceptions (seasonal items and discontinued limited-time offers) were edge cases, and keeping two parallel systems had a real cost in design and engineering time.</p>
+        <p>The PM and I made the call together: <b>remove Favourites</b>, and put all the design and engineering effort into making one reorder experience significantly better.</p>
+        <div class="tab-shift" role="img" aria-label="Before: three tabs, Full menu, Recents and Favourites. After: two tabs, Full menu and Order again.">
+          <div><span class="label">Before</span><span class="ts-tabs"><span>Full menu</span><span>Recents</span><span class="ts-gone">Favourites</span></span></div>
+          <div><span class="label">After</span><span class="ts-tabs"><span>Full menu</span><span class="ts-on">Order again</span></span></div>
+        </div>
+        <p>With one tab left, its name mattered too. Our copywriter and I proposed renaming it from "Recents" to <b>"Order again"</b>: it describes what guests come to do, not how the list is built.</p>
+      </section>
+
+      <!-- ACT III -->
+      <section class="act" id="work-act" aria-labelledby="work-title">
+        <header class="act-head"><p class="label">Act III</p><h2 id="work-title">The <em>work.</em></h2></header>
+
+        <h3 id="directions">Four directions, before any detail</h3>
+        <p>With Favourites gone, the question became what the new reorder list should look like. Rather than design one answer in isolation, I took four directions to the team early, each a genuinely different idea of how reordering should work, not a visual variation. Putting them side by side forced a real conversation about trade-offs instead of a review of one preferred solution.</p>
+        <div class="dirs">
+          <figure class="cs-figure dir">
+            <img class="screen" src="../assets/img/work/order-again/dir-a.jpg?v=8d945a44" alt="Direction A: past orders grouped by date, each with a Reorder button and every item listed with a plus button" width="420" height="958" loading="lazy">
+            <figcaption><b>A. Whole orders and items.</b> Closest to the old Recents, but long, duplicated lists for guests who order the same thing every day.</figcaption>
+          </figure>
+          <figure class="cs-figure dir dir--chosen">
+            <img class="screen" src="../assets/img/work/order-again/dir-b.jpg?v=25064c59" alt="Direction B: a single list of recent items, each with its modifiers and a plus button" width="420" height="958" loading="lazy">
+            <figcaption><b>B. Items only.</b> <span class="dir-tag">Chosen</span> Least cluttered, no duplicates, and whole orders can still be rebuilt with a few taps.</figcaption>
+          </figure>
+          <figure class="cs-figure dir">
+            <img class="screen" src="../assets/img/work/order-again/dir-c.jpg?v=d471346b" alt="Direction C: a horizontal carousel of recent items above a list of recent orders" width="420" height="958" loading="lazy">
+            <figcaption><b>C. Item carousel and orders.</b> Kept every feature, but horizontal scrolling has a high interaction cost and "5 add-ons" hides what they are.</figcaption>
+          </figure>
+          <figure class="cs-figure dir">
+            <img class="screen" src="../assets/img/work/order-again/dir-d.jpg?v=b675ed73" alt="Direction D: cards for whole past orders with item thumbnails and a View details button" width="420" height="958" loading="lazy">
+            <figcaption><b>D. Whole orders only.</b> Easy for guests who repeat full orders; no way to reorder a single item.</figcaption>
+          </figure>
+        </div>
+        <p>The data settled it. About <b>115,000 guests a month (17%)</b> added single items from their history, against <b>95,000 (14%)</b> who re-added whole orders, so item-level reordering was the interaction to optimize. Direction B also gave the cleanest interface and the lowest engineering overhead. The guests who preferred whole orders didn't lose the ability: they could rebuild an order by tapping items. What they lost was a one-tap shortcut only 14% used.</p>
+
+        <h3 id="card">A card that fits every product</h3>
+        <p>Direction B lives or dies on one component: the item card. I explored fixed and adjustable heights, with and without a quantity, focusing on clarity, hierarchy and accessibility.</p>
+        <div class="card-matrix" role="group" aria-label="Card explorations: fixed or adjustable height, with or without quantity">
+          <span class="cm-head cm-h1">Fixed height</span>
+          <span class="cm-head cm-h2">Adjustable height</span>
+          <p class="cm-row cm-r1">With quantity<small>Image 64 · padding 16 · card 98px</small></p>
+          <p class="cm-row cm-r2">No quantity<small>Image 64 · padding 16 · card 96px</small></p>
+          <figure class="cm-cell"><img src="../assets/img/work/order-again/card-fixed-qty.png?v=3cd6c1b3" alt="Fixed-height card with a quantity badge: the name and modifiers are cut off after two lines" width="494" height="156" loading="lazy"><figcaption>Fixed height, with quantity</figcaption></figure>
+          <figure class="cm-cell"><img src="../assets/img/work/order-again/card-adj-qty.png?v=9abf4b9f" alt="Adjustable-height card with a quantity badge" width="494" height="156" loading="lazy"><figcaption>Adjustable height, with quantity</figcaption></figure>
+          <figure class="cm-cell"><img src="../assets/img/work/order-again/card-fixed-noqty.png?v=c81e56ed" alt="Fixed-height card without quantity: modifiers cut off after two lines" width="494" height="160" loading="lazy"><figcaption>Fixed height, no quantity</figcaption></figure>
+          <figure class="cm-cell cm-cell--chosen"><img src="../assets/img/work/order-again/card-adj-noqty.png?v=3f7c6c25" alt="Adjustable-height card without quantity: the card grows to show every modifier" width="494" height="195" loading="lazy"><figcaption>Adjustable height, no quantity <span class="dir-tag">Chosen</span></figcaption></figure>
+        </div>
+        <p class="caption">Card explorations, with spacing specs. Adjustable height without a quantity badge won.</p>
+        <div class="split split--photo">
+          <div>
+            <p>An adjustable card sounds simple, but it has to hold every product name in the Tim Hortons catalogue, in English and French, without making the list feel unpredictable. Rather than guess, we plotted the length of every product name in both languages.</p>
+            <p>The finding: <b>97% of names fit within two lines</b>, 88% are 43 letters or fewer, and 46% fit on a single line. That turned a design opinion into a defensible, data-backed spec for card height.</p>
+          </div>
+          <figure class="cs-figure split-fig stage stage--tight">
+            <img src="../assets/img/work/order-again/letters.png?v=0ad6a6a6" alt="Histogram of product name lengths in English and French, with example cards from 3 to 79 letters; 46% fit on one line, 88% are up to 43 letters and 97% fit in two lines" width="1315" height="1781" loading="lazy">
+            <figcaption>Product name lengths across the catalogue, English and French.</figcaption>
+          </figure>
+        </div>
+        <ol class="findings">
+          <li><b>Adjustable height.</b> Most products need at most two lines for the name, and a flexible card handles the long tail without truncating everything else.</li>
+          <li><b>Every modifier, shown in full.</b> Seeing exactly what was in a past item prevents ordering mistakes.</li>
+          <li><b>No quantity.</b> Tapping + again is faster than adding a quantity control, and removing it kept the card and the checkout cleaner.</li>
+        </ol>
+        <figure class="cs-figure screens-fig">
+          <div class="screens">
+            <div class="screen-item"><span class="screen-label">Fixed height</span><img class="screen" src="../assets/img/work/order-again/card-fixed.jpg?v=bc4bfa26" alt="Order again list with fixed card heights: long names and modifiers are cut off with ellipses" width="216" height="444" loading="lazy"></div>
+            <div class="screen-item"><span class="screen-label">Adjustable height</span><img class="screen" src="../assets/img/work/order-again/card-adjustable.jpg?v=d8219e02" alt="Order again list with adjustable card heights: each card grows to show the full modifier list" width="216" height="444" loading="lazy"></div>
+          </div>
+          <figcaption>The same list, fixed against adjustable heights. Adjustable won: every modifier stays readable.</figcaption>
+        </figure>
+        <p>The quick-add card didn't stay a one-off: it became a <b>reusable component in the design system</b>, so other reorder and menu surfaces can use the same pattern.</p>
+
+        <h3>Feedback you barely notice</h3>
+        <p>The last detail was how to confirm an item had been added. The obvious answer was a toast sliding up from the bottom of the screen. We'd seen toasts tested on another feature, and for this one the team agreed it slowed things down: guests reordering are in a fast, intent-driven state, and even a small interruption breaks that momentum.</p>
+        <p>Instead, I explored micro-animations in Lottie: a small burst on the + button, haptic feedback, and the cart count ticking up in real time. The animation restarts on every tap, so adding the same item three times feels as quick as tapping three times. The team chose the third of my explorations.</p>
+        <figure class="cs-figure proto">
+          <div class="proto-frame" data-embed="https://embed.figma.com/proto/dMMPRP1nJSD3jigyUQKOFO/MO-P?node-id=111-10619&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=31%3A23553&amp;starting-point-node-id=111%3A10619&amp;show-proto-sidebar=1&amp;bg-color=E5E0D8&amp;embed-host=share" data-embed-title="Interactive Figma prototype of Order again and its add-to-cart micro-animations">
+            <button class="proto-load" type="button"><span class="proto-load-title">Try the prototype</span><span class="proto-load-sub">Add items to the cart and compare the micro-animation explorations. Loads Figma here on the page.</span><span class="btn">Load prototype</span></button>
+          </div>
+          <figcaption>Adding items to the cart, plus the three micro-animation explorations. Use the Flows list to switch between them. <a href="https://www.figma.com/proto/dMMPRP1nJSD3jigyUQKOFO/MO-P?node-id=111-10619&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=31%3A23553&amp;starting-point-node-id=111%3A10619&amp;show-proto-sidebar=1" target="_blank" rel="noopener">Open full screen in Figma</a></figcaption>
+        </figure>
+        <h3>The shipped flow</h3>
+        <div class="fx">
+          <figure class="fx-video fx-video--native">
+            <video class="screen" src="../assets/img/work/order-again/flow.mp4?v=a735a571" poster="../assets/img/work/order-again/flow-poster.jpg" width="720" height="1466" controls muted loop playsinline preload="none" aria-label="Screen recording of the shipped Order again tab in the Tim Hortons app: adding items, opening one to customize, and the cart count rising to four"></video>
+            <figcaption>Order again in the live Tim Hortons app.</figcaption>
+          </figure>
+          <div class="fx-steps">
+            <p class="label">In the live app</p>
+            <ol class="fx-list">
+              <li><b>Open Order again.</b> It sits next to Full menu, so returning guests are one tap from their usual.</li>
+              <li><b>Tap + to add.</b> Each tap adds the item with its saved modifiers, and the cart count ticks up with no toast in the way.</li>
+              <li><b>Tap the item to change it.</b> Tapping anywhere outside the + opens the item to customize before adding.</li>
+              <li><b>Review the order.</b> A few taps and the cart is ready.</li>
+            </ol>
+          </div>
+        </div>
+
+        <h3>Designing for the edges</h3>
+        <p>A reorder experience is only as good as its worst moment, so I designed for the two states most guests will never notice.</p>
+        <div class="split split--photo split--center">
+          <div>
+            <p class="label">New guests</p>
+            <p>Instead of a blank screen, the empty state explains what Order again will show and sets expectations for their next visit, turning a dead end into a small onboarding moment.</p>
+          </div>
+          <figure class="cs-figure split-fig screens-fig screens-fig--single">
+            <img class="screen" src="../assets/img/work/order-again/empty.jpg?v=6c383c72" alt="Order again empty state: No recent orders yet. We'll save your recently ordered items here, so you can quickly order them again." width="375" height="815" loading="lazy">
+            <figcaption>The empty state for new guests.</figcaption>
+          </figure>
+        </div>
+        <p class="label edge-label">Unavailable items</p>
+        <p>Past items aren't always orderable: the restaurant may not offer them, the daypart may not allow them (no lunch at breakfast), or they may no longer be sold. I mocked up three ways to handle it: an "Item unavailable" tag on the card, a dismissible banner at the top, or hiding those items entirely.</p>
+        <div class="dirs dirs--3">
+          <figure class="cs-figure dir">
+            <div class="pin-wrap"><img class="screen" src="../assets/img/work/order-again/unavail-1.jpg?v=090dbeb0" alt="Option 1: unavailable items stay in the list with a grey Item unavailable tag on the card" width="259" height="660" loading="lazy"><span class="pin" style="left:58%;top:61.5%" aria-hidden="true">1</span></div>
+            <figcaption><b>1. Tag on the card.</b> The item stays in place, greyed out with an "Item unavailable" tag. Clear, but the list fills with things guests can't order.</figcaption>
+          </figure>
+          <figure class="cs-figure dir">
+            <div class="pin-wrap"><img class="screen" src="../assets/img/work/order-again/unavail-2.jpg?v=ec32d508" alt="Option 2: a dismissible banner at the top says some items may not appear because they are unavailable" width="259" height="660" loading="lazy"><span class="pin" style="left:4%;top:17%" aria-hidden="true">2</span></div>
+            <figcaption><b>2. Dismissible banner.</b> One message at the top explains that some items are missing, and guests can close it once read.</figcaption>
+          </figure>
+          <figure class="cs-figure dir dir--chosen">
+            <div class="pin-wrap"><img class="screen" src="../assets/img/work/order-again/unavail-3.jpg?v=e446c1f3" alt="Option 3: unavailable items are simply not shown; the list only contains items that can be ordered" width="258" height="660" loading="lazy"></div>
+            <figcaption><b>3. Hide them.</b><span class="dir-tag">Shipped first</span>Only items guests can order right now appear. The simplest list, and the simplest code.</figcaption>
+          </figure>
+        </div>
+        <p>After discussing it with the team, we chose to <b>hide unavailable items</b> for the first release: it kept the code simpler and meant guests only ever saw things they could order. The other two options stay ready if testing shows guests need to see what's missing.</p>
+        <p>The final spec covered the rest of the rules: identical items (including modifiers) appear once, the list draws on up to 50 orders from the last six months and shows at most 20 items, and it works across English and French in Canada and English in the US.</p>
+      </section>
+
+      <section class="act act--proof" id="proof" aria-labelledby="proof-title">
+        <header class="act-head"><p class="label">Act IV</p><h2 id="proof-title">The <em>proof.</em></h2></header>
+
+        <h3>A careful rollout</h3>
+        <p>Order Again shipped behind a feature flag in four phases, each with clear success criteria: load time under a second, no drop in conversion, and stable order rates.</p>
+        <ol class="loop" aria-label="Rollout phases">
+          <li><span class="label">Nov 13</span>Internal beta</li>
+          <li><span class="label">Nov 24–25</span>20%, then 50% of guests, paused briefly to fix minor bugs</li>
+          <li><span class="label">Nov 27, 2025</span>100% of guests</li>
+        </ol>
+
+        <h3 id="results">The results</h3>
+        <div class="proof-hero">
+          <p class="big-fig">+3.6<small>pts</small></p>
+          <div>
+            <p class="big-fig-label">Order conversion after rollout, from 59.1% to 62.7%.</p>
+            <p>The early results after rollout backed the core decisions. Removing a feature didn't cost guests anything they valued: more of them completed their orders, and fewer abandoned the reorder screen.</p>
+          </div>
+        </div>
+        <dl class="cs-stats proof-stats">
+          <div><dt>Drop-off on reorder screens, from 9.3% to 7.4%</dt><dd>−20<small>%</small></dd></div>
+          <div><dt>Faster on the reorder screen, from 47s to 27s</dt><dd>~20<small>s</small></dd></div>
+          <div><dt>Reorder systems for engineering to maintain, down from two</dt><dd>1</dd></div>
+        </dl>
+      </section>
+
+      <section class="act" id="learnings" aria-labelledby="learnings-title">
+        <header class="act-head"><p class="label">Learnings</p><h2 id="learnings-title">What I'm <em>taking with me.</em></h2></header>
+        <ol class="learnings">
+          <li><b>Removing a feature is a design decision too.</b> Most portfolios show what was built. This project was defined by what we took away, and by the rigor needed to make that call responsibly. The results validated it: less drop-off and higher conversion than the experience it replaced.</li>
+          <li><b>Passive convenience beats deliberate curation.</b> Guests don't want to maintain a Favourites list; they want the app to remember for them. The speed gain didn't come from a clever interaction pattern. It came from removing work guests were never enthusiastic about doing.</li>
+          <li><b>Small decisions compound.</b> Card height, quantity, toast or micro-animation: none feels significant alone. Together they decide whether an experience feels fast and trustworthy or slow and uncertain. The detail work is the product.</li>
+        </ol>
+      </section>
+
+      <section class="act" id="next" aria-labelledby="next-title">
+        <header class="act-head"><p class="label">What's next</p><h2 id="next-title">Where this <em>goes next.</em></h2></header>
+        <ul class="wip">
+          <li><b>Measure in detail</b>Track reorder rates and modifier retention, to know not just whether guests reorder but whether one-tap reordering with saved modifiers works as intended.</li>
+          <li><b>Personalize</b>Recommend items within Order again by time of day, location or ordering patterns, once the core behavior is proven at scale.</li>
+        </ul>
+        <p class="goal">The best feature is sometimes the one you don't ship. The second best is the one that does the work so your guest doesn't have to.</p>
+      </section>
+
+      <nav class="pager" aria-label="More work">
+        <a href="/#work"><span class="label">Keep exploring</span><strong>← Back to all work</strong></a>
+      </nav>
+    </article>
+  </div>
+</main>
+
+<footer class="on-ink cs-footer" id="contact">
+  <div class="wrap">
+    <p class="cs-footer-line">Good things happen when <em>curious minds</em> meet.</p>
+    <p class="contact-links"><a class="email" href="mailto:anvita.sodhi@gmail.com">anvita.sodhi@gmail.com</a> <a href="https://www.linkedin.com/in/anvitasodhi" rel="me">LinkedIn ↗</a></p>
+  </div>
+  <div class="site-footer"><div class="wrap"><span>© 2026 Anvita Sodhi</span><span>Images shown with permission; some details omitted for confidentiality.</span></div></div>
+</footer>
+<p class="preview-banner" role="status">Preview mode: drafts are visible. The live site hides them.</p>
+</body>
+</html>

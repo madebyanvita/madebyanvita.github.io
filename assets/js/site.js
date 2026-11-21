@@ -118,8 +118,8 @@
   imgs.forEach(function (img) {
     var b = document.createElement('button');
     b.type = 'button'; b.className = 'zoomable';
-    var pair = img.closest('.ba-pair');
-    b.setAttribute('aria-label', pair ? 'Expand before and after' : 'Expand image: ' + (img.alt || ''));
+    var pair = img.closest('.ba-pair'), group = img.closest('.screens, .dirs');
+    b.setAttribute('aria-label', pair ? 'Expand before and after' : group ? 'Expand screens together' : 'Expand image: ' + (img.alt || ''));
     img.parentNode.insertBefore(b, img); b.appendChild(img);
     b.addEventListener('click', function () {
       stage.replaceChildren();
@@ -131,6 +131,15 @@
         var cap = pair.querySelector('.ba-cap');
         if (cap) { var p = document.createElement('p'); p.className = 'lightbox-cap'; p.innerHTML = cap.innerHTML; wrap.appendChild(p); }
         stage.appendChild(wrap);
+      } else if (group) {
+        var items = group.querySelectorAll('.screen-item, .dir');
+        var gw = document.createElement('div'); gw.className = 'lightbox-pair' + (items.length > 2 ? ' lightbox-pair--4' : '');
+        items.forEach(function (it) {
+          var l = it.querySelector('.screen-label, figcaption b'); gw.appendChild(shot(it.querySelector('img'), l ? l.textContent : ''));
+        });
+        var gc = group.closest('figure') && group.closest('figure').querySelector('figcaption');
+        if (gc) { var gp = document.createElement('p'); gp.className = 'lightbox-cap'; gp.innerHTML = gc.innerHTML; gw.appendChild(gp); }
+        stage.appendChild(gw);
       } else {
         stage.appendChild(shot(img, ''));
       }
@@ -176,6 +185,7 @@
   if (!still) seen(dds, function (dd) {
     var node = dd.firstChild;
     if (!node || node.nodeType !== 3) return;
+    if (!/^\d+$/.test(node.nodeValue.trim())) return;
     var end = parseInt(node.nodeValue, 10);
     if (!(end > 1)) return;
     var t0 = null, dur = 1100;
