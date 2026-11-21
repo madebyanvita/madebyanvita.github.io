@@ -218,3 +218,22 @@
   addEventListener('resize', update);
   update();
 })();
+
+/* Prototype version switcher: buttons swap the embedded prototype's ?variant= */
+(function () {
+  document.querySelectorAll('.proto-switch').forEach(function (sw) {
+    var fig = sw.closest('figure'), box = fig && fig.querySelector('[data-embed-base]');
+    if (!box) return;
+    var link = fig.querySelector('figcaption a');
+    sw.querySelectorAll('button[data-variant]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var url = box.getAttribute('data-embed-base') + b.getAttribute('data-variant');
+        sw.querySelectorAll('button').forEach(function (o) { o.setAttribute('aria-pressed', o === b ? 'true' : 'false'); });
+        box.setAttribute('data-embed', url);
+        if (link) link.href = url;
+        var f = box.querySelector('iframe');
+        if (f) f.src = url; else { var load = box.querySelector('.proto-load'); if (load) load.click(); }
+      });
+    });
+  });
+})();

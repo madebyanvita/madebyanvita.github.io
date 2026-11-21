@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en-CA" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Variant Reset · Anvita Sodhi</title>
+<meta name="description" content="Case study: fixing a silent modifier reset in the Tim Hortons app. A within-subjects study of three variants led Anvita to recommend the slowest option, the only one guests could trust.">
+<link rel="canonical" href="https://madebyanvita.github.io/work/variant-reset.html">
+<meta name="theme-color" content="#F4F1EB">
+<script>(function(){var t;try{t=localStorage.getItem("theme")}catch(e){}document.documentElement.setAttribute("data-theme",t||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"))})()</script>
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Anvita Sodhi">
+<meta property="og:title" content="Variant Reset: the slowest option was the right one">
+<meta property="og:description" content="Fixing a silent modifier reset in the Tim Hortons app, with a 20-person within-subjects study and a phased release.">
+<meta property="og:url" content="https://madebyanvita.github.io/work/variant-reset.html">
+<meta property="og:image" content="https://madebyanvita.github.io/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/site.css?v=0cb4f66f">
+<script src="../assets/js/site.js?v=d55786e9" defer></script>
+</head>
+<body class="case">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="../">Anvita Sodhi</a>
+    <div class="header-end">
+    <nav class="site-nav" aria-label="Primary">
+      <a href="../#work" aria-current="page">Work</a>
+      <a href="../#experience">Experience</a>
+      <a href="../#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Dark mode" title="Lights off"><svg viewBox="0 0 26 12" aria-hidden="true"><rect class="tt-lens" x="1" y="1.5" width="10" height="8.5" rx="3.6"/><rect class="tt-lens" x="15" y="1.5" width="10" height="8.5" rx="3.6"/><rect class="tt-frame" x="1" y="1.5" width="10" height="8.5" rx="3.6"/><rect class="tt-frame" x="15" y="1.5" width="10" height="8.5" rx="3.6"/><path class="tt-frame" d="M11 4.5 C 12 3, 14 3, 15 4.5"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="cs-hero">
+    <div class="wrap">
+      <p class="cs-crumb"><a href="../#work">← All work</a></p>
+      <div class="cs-hero-split">
+        <div class="cs-hero-text">
+        <p class="label cs-kicker">Case study 03 · Tim Hortons · Mobile ordering</p>
+        <h1 class="cs-title">Variant Reset: the slowest option <em>was the right one.</em></h1>
+        <p class="cs-lede">In the Tim Hortons app, changing an item's size quietly wiped every customization a guest had made. For someone who had removed cheese for a dairy allergy, that meant the wrong order and no warning. I led the fix end to end: I designed a study that put three ways of handling the reset in front of every participant, recommended the slowest one because it was the only one guests could trust, and took it through a phased release. 16 of 20 participants preferred it, and guest-care tickets about order accuracy fell almost 20% week over week.</p>
+        </div>
+        <figure class="cs-hero-media cs-hero-media--phone">
+          <div class="device"><img src="../assets/img/work/variant-reset/alert.jpg?v=86026fea" alt="The shipped alert in the Tim Hortons app: Reset customizations? Changing this option will reset the selections you made for this item. Cancel or Continue." width="750" height="1624" fetchpriority="high"></div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap cs-impact" aria-label="Impact">
+    <dl class="cs-stats cs-stats--4">
+      <div><dt>Guest-care tickets about order accuracy, week over week after rollout</dt><dd>−20<small>%</small></dd></div>
+      <div><dt>Participants who preferred the alert, after trying all three</dt><dd>16<small>/20</small></dd></div>
+      <div><dt>Days from 10% to 100% of guests, with zero rollbacks</dt><dd>4</dd></div>
+      <div><dt>Directors who signed off: Product, Design and Engineering</dt><dd>3</dd></div>
+    </dl>
+    <dl class="cs-facts">
+      <div><dt>Role</dt><dd>Lead product designer: research design, variant testing, UI and release</dd></div>
+      <div><dt>Team</dt><dd>Project manager, tech lead and engineering, with director sign-off</dd></div>
+      <div><dt>Method</dt><dd>Remote usability study on Dscout, within-subjects, randomized order, 20 participants</dd></div>
+      <div><dt>Shipped</dt><dd>February 2026, phased from 10% to 100% of guests in four days</dd></div>
+    </dl>
+  </section>
+
+  <section class="cs-glance" aria-labelledby="owned-title">
+    <div class="wrap">
+      <h2 id="owned-title" class="label">Three decisions I drove</h2>
+      <ol class="owned">
+        <li>
+          <p class="owned-n">01</p>
+          <h3>Frame it as safety</h3>
+          <p>A reset that can put an allergen back in an order isn't a UX annoyance. Framing it that way set the bar for the solution, and for who had to approve it.</p>
+          <a class="owned-link" href="#mess">The problem →</a>
+        </li>
+        <li>
+          <p class="owned-n">02</p>
+          <h3>Test every option on everyone</h3>
+          <p>A within-subjects study, in randomized order, so each participant compared all three options directly instead of averaging across groups.</p>
+          <a class="owned-link" href="#study">The study →</a>
+        </li>
+        <li>
+          <p class="owned-n">03</p>
+          <h3>Ship the slowest option</h3>
+          <p>The alert added 11 seconds to a size change. It was also the only option that asked first, and 16 of 20 participants preferred it.</p>
+          <a class="owned-link" href="#decision">The decision →</a>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <div class="wrap cs-layout">
+    <nav class="cs-toc" aria-label="On this page">
+      <p class="label">On this page</p>
+      <ol>
+        <li><a href="#mess">The mess</a></li>
+        <li><a href="#meaning">The meaning</a></li>
+        <li><a href="#work-act">The work</a></li>
+        <li><a href="#proof">The proof</a></li>
+        <li><a href="#learnings">Learnings</a></li>
+        <li><a href="#next">What's next</a></li>
+      </ol>
+    </nav>
+
+    <article class="cs-body">
+      <section class="act" id="mess" aria-labelledby="mess-title">
+        <header class="act-head"><p class="label">Act I</p><h2 id="mess-title">The <em>mess.</em></h2></header>
+
+        <h3>A bug everyone knew about</h3>
+        <p>Guests who customize their orders, removing allergens, adjusting portions or choosing alternatives, expect those choices to stick. In the Tim Hortons app they didn't. If a guest changed the size or variant of an item after customizing it, the app reset every modification back to default. No warning, no confirmation.</p>
+        <p>The bug was well known across the team, and we agreed it had to be fixed. What made it urgent was who it hurt most.</p>
+        <ol class="loop loop--story" aria-label="How the reset caused a wrong order">
+          <li><span class="label">1 · Customize</span>A guest removes cheese from a sandwich because of a dairy allergy.</li>
+          <li><span class="label">2 · Change size</span>They switch to a different variant of the same sandwich.</li>
+          <li><span class="label">3 · Silent reset</span>The app puts the cheese back. Nothing tells them, and they order it.</li>
+        </ol>
+        <p>Order accuracy was already the top source of guest complaints, and this was a significant driver. App-store reviews called out "modifiers disappearing" and "changes not sticking".</p>
+        <figure class="cs-figure fig-video fig-video--solo"><div class="video video--tall"><iframe src="https://www.youtube-nocookie.com/embed/EK3EQ8lPywE?rel=0" title="The original behaviour: changing the size resets the customizations with no notification" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption>Before: change the size and every customization quietly resets. <a href="https://youtube.com/shorts/EK3EQ8lPywE">Watch on YouTube</a></figcaption></figure>
+
+        <h3>Why it needed more than a quick fix</h3>
+        <p>Because a reset could expose guests to allergens they had explicitly removed, this carried safety and legal implications, not just a usability cost. The solution needed sign-off from directors of Product, Design and Engineering before it could ship.</p>
+        <p class="goal"><span class="label">The real question</span>Not whether to fix it, but how to tell guests about a reset in a way that protects them without slowing ordering down.</p>
+      </section>
+
+      <section class="act" id="meaning" aria-labelledby="meaning-title">
+        <header class="act-head"><p class="label">Act II</p><h2 id="meaning-title">The <em>meaning.</em></h2></header>
+
+        <h3 id="study">Designing the right test</h3>
+        <p>I designed a remote usability study on Dscout to compare three ways of handling the reset. Rather than giving each version to a separate group, I used a <b>within-subjects design</b>: each of the 20 participants tried all three, in a randomized order so no version benefited from going first.</p>
+        <p>When the same person tries every option, their feedback is a direct comparison rather than an average across different people. For a decision that would need director sign-off, that made the evidence much harder to argue with.</p>
+        <p>Each participant did two tasks per version: customize a brewed coffee (two creams, two sugars and a vanilla shot), then change it from a medium to a large. Afterwards, they told us which notification style they preferred.</p>
+
+        <h3>Three ways to handle a reset</h3>
+        <div class="dirs dirs--3">
+          <figure class="cs-figure dir">
+            <div class="pin-wrap"><img class="screen" src="../assets/img/work/variant-reset/silent.jpg?v=894a6e47" alt="Silent: the brewed coffee screen after a size change, with the customizations reset and no message" width="750" height="1624" loading="lazy"></div>
+            <figcaption><b>1. Silent.</b><span class="dir-tag dir-tag--muted">Control</span>The existing behaviour: changing the size resets the customizations with no notification. Fastest, but the guest has no way of knowing their choices were cleared.</figcaption>
+          </figure>
+          <figure class="cs-figure dir">
+            <div class="pin-wrap"><img class="screen" src="../assets/img/work/variant-reset/toast.jpg?v=1ebc3507" alt="Toast: a message near the bottom says Your Brewed Coffee customizations have been reset" width="750" height="1624" loading="lazy"><span class="pin" style="left:5%;top:82.5%" aria-hidden="true">2</span></div>
+            <figcaption><b>2. Toast.</b> A short message slides up to say the customizations were reset, then disappears on its own. No action needed.</figcaption>
+          </figure>
+          <figure class="cs-figure dir dir--chosen">
+            <div class="pin-wrap"><img class="screen" src="../assets/img/work/variant-reset/alert.jpg?v=86026fea" alt="Alert: a dialog asks Reset customizations? with Cancel and Continue" width="750" height="1624" loading="lazy"><span class="pin" style="left:14%;top:41.5%" aria-hidden="true">3</span></div>
+            <figcaption><b>3. Alert.</b><span class="dir-tag">Shipped</span>A dialog warns that changing the option will reset the guest's selections. They choose Cancel or Continue before anything changes.</figcaption>
+          </figure>
+        </div>
+
+        <figure class="cs-figure proto proto--variants">
+          <div class="proto-switch" role="group" aria-label="Choose a version to try">
+            <button type="button" data-variant="silent" aria-pressed="true">Silent</button>
+            <button type="button" data-variant="toast" aria-pressed="false">Toast</button>
+            <button type="button" data-variant="alert" aria-pressed="false">Alert</button>
+          </div>
+          <div class="proto-frame proto-frame--phone" data-embed="https://trait-trust-40802870.figma.site/?variant=silent" data-embed-base="https://trait-trust-40802870.figma.site/?variant=" data-embed-title="Interactive test prototype of the modifier reset">
+            <button class="proto-load" type="button"><span class="proto-load-title">Try the test yourself</span><span class="proto-load-sub">Customize a brewed coffee, then change its size. Switch versions above. Loads the prototype here on the page.</span><span class="btn">Load prototype</span></button>
+          </div>
+          <figcaption>The prototype participants used. <a href="https://trait-trust-40802870.figma.site/?variant=silent" target="_blank" rel="noopener">Open it in a new tab</a></figcaption>
+        </figure>
+      </section>
+
+      <section class="act" id="work-act" aria-labelledby="work-title">
+        <header class="act-head"><p class="label">Act III</p><h2 id="work-title">The <em>work.</em></h2></header>
+
+        <h3>What the data said</h3>
+        <p>The size-change task is where the versions differ, so it's the one that matters. Customizing (the first task) didn't involve the reset, so it isn't compared here.</p>
+        <div class="bars" role="table" aria-label="Average time to change the size, and ease-of-use rating, by version">
+          <div class="bar-row" role="row"><span role="rowheader" class="bar-name">Silent</span><span role="cell" class="bar-track"><span class="bar" style="--v:12;--max:23"></span><b>12s</b></span><span role="cell" class="bar-rate">6.85<small>/7</small></span></div>
+          <div class="bar-row" role="row"><span role="rowheader" class="bar-name">Toast</span><span role="cell" class="bar-track"><span class="bar" style="--v:18;--max:23"></span><b>18s</b></span><span role="cell" class="bar-rate">6.25<small>/7</small></span></div>
+          <div class="bar-row bar-row--chosen" role="row"><span role="rowheader" class="bar-name">Alert</span><span role="cell" class="bar-track"><span class="bar" style="--v:23;--max:23"></span><b>23s</b></span><span role="cell" class="bar-rate">6.35<small>/7</small></span></div>
+          <div class="bar-head" aria-hidden="true"><span></span><span>Average time to change size</span><span>Ease of use</span></div>
+        </div>
+        <p class="caption">20 participants, each trying all three versions in a randomized order.</p>
+        <p class="label pref-label">Which did they prefer?</p>
+        <div class="bars bars--pref" role="table" aria-label="Preferred notification style, out of 20 participants">
+          <div class="bar-row" role="row"><span role="rowheader" class="bar-name">Silent</span><span role="cell" class="bar-track"><span class="bar" style="--v:1;--max:16"></span><b>1</b></span></div>
+          <div class="bar-row" role="row"><span role="rowheader" class="bar-name">Toast</span><span role="cell" class="bar-track"><span class="bar" style="--v:3;--max:16"></span><b>3</b></span></div>
+          <div class="bar-row bar-row--chosen" role="row"><span role="rowheader" class="bar-name">Alert</span><span role="cell" class="bar-track"><span class="bar" style="--v:16;--max:16"></span><b>16</b></span></div>
+        </div>
+        <p class="caption">Asked after all three tasks: "When you changed the size of the coffee, your previous modifications were reset. Which notification style did you prefer?"</p>
+        <figure class="cs-figure fig-video cs-figure--wide"><div class="video"><iframe src="https://www.youtube-nocookie.com/embed/sASufDImx-w?rel=0" title="Participants reacting to the toast and alert notifications" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption>Participants reacting to the toast and the alert during the study. <a href="https://youtu.be/sASufDImx-w">Watch on YouTube</a></figcaption></figure>
+
+        <h3 id="decision">Why the slowest option won</h3>
+        <p>On timing alone, Silent looked best: fastest, and rated easiest. But speed wasn't the right measure here, and when participants were asked which they preferred, the answer was clear.</p>
+        <ol class="findings">
+          <li><b>Silent was the bug.</b> It removed the friction and the transparency with it. A guest with a dairy allergy had no way of knowing their choice had been cleared. The absence of a message doesn't communicate safety; it communicates nothing.</li>
+          <li><b>Toast was easy to miss.</b> It informed guests, but participants' feedback showed that a message that disappears on its own wasn't enough for someone who needed to be certain what had happened to their order.</li>
+          <li><b>Alert gave guests control.</b> It was the slowest, 23 seconds against 12, but the only version that asked before changing anything. Participants called it "attention-grabbing" and "clear", and 16 of 20 preferred it. They felt informed, not surprised.</li>
+        </ol>
+        <p>I recommended Alert, framing the 11 extra seconds as a deliberate trade-off rather than a cost to minimize. Directors of Product, Design and Engineering agreed.</p>
+        <p class="pull">The right answer wasn't in the speed data.</p>
+
+        <h3>What shipped</h3>
+        <p>The alert appears only when a guest has customized an item and then changes its variant, so guests who haven't customized anything never see it. It covers every way into the customization screen (the menu, Order Again and editing from the cart) for pickup and delivery orders. It explains what will happen and lets them decide, instead of silently overriding their choices.</p>
+        <div class="fx">
+          <figure class="fx-video fx-video--native fx-video--device">
+            <div class="device"><video src="../assets/img/work/variant-reset/shipped.mp4?v=e2d36160" poster="../assets/img/work/variant-reset/shipped-poster.jpg" width="720" height="1466" controls muted loop playsinline preload="none" aria-label="Screen recording of the shipped alert in the Tim Hortons app: customizing a coffee, changing its size, confirming the reset and customizing again"></video></div>
+            <figcaption>The shipped alert in the live Tim Hortons app.</figcaption>
+          </figure>
+          <div class="fx-steps">
+            <p class="label">In the live app</p>
+            <ol class="fx-list">
+              <li><b>Customize.</b> The guest picks Double Double and adjusts their dairy.</li>
+              <li><b>Change the size.</b> Before anything resets, the alert asks: "Reset customizations?"</li>
+              <li><b>Decide.</b> Cancel keeps everything. Continue resets the item, and the guest knows to check it.</li>
+              <li><b>Customize again, knowingly.</b> No silent surprises in the order.</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="act act--proof" id="proof" aria-labelledby="proof-title">
+        <header class="act-head"><p class="label">Act IV</p><h2 id="proof-title">The <em>proof.</em></h2></header>
+
+        <h3>A careful release</h3>
+        <p>Given the safety context, we rolled out behind a feature flag so anything unexpected could be pulled back before it reached every guest. Each phase had to clear the same bar: no severe bugs, no escalations from guest care or restaurant support, fewer guest-care tickets, and minimal impact on conversion and speed.</p>
+        <ol class="loop" aria-label="Rollout phases">
+          <li><span class="label">Jan 30 – Feb 6</span>Regression testing in staging before any guest saw it</li>
+          <li><span class="label">Feb 9–10</span>10%, then 50% of guests: no new bugs, no spike in complaints</li>
+          <li><span class="label">Feb 12, 2026</span>100% of guests, with no rollbacks</li>
+        </ol>
+
+        <h3 id="results">The results</h3>
+        <div class="proof-hero">
+          <p class="big-fig">−20<small>%</small></p>
+          <div>
+            <p class="big-fig-label">Guest-care tickets about order accuracy, the most common ticket type, fell almost 20% week over week after rollout.</p>
+            <p>There was no impact on conversion or ordering speed, and no negative app reviews: the alert added a moment of awareness without slowing people down. The more important outcome is trust. Guests with allergies or dietary restrictions can now change an item's size without worrying that the app has quietly overridden their choices.</p>
+          </div>
+        </div>
+        <dl class="cs-stats proof-stats">
+          <div><dt>Days from 10% to 100% of guests</dt><dd>4</dd></div>
+          <div><dt>Rollbacks needed</dt><dd>0</dd></div>
+          <div><dt>Negative app reviews reported after release</dt><dd>0</dd></div>
+        </dl>
+      </section>
+
+      <section class="act" id="learnings" aria-labelledby="learnings-title">
+        <header class="act-head"><p class="label">Learnings</p><h2 id="learnings-title">What I'm <em>taking with me.</em></h2></header>
+        <ol class="learnings">
+          <li><b>Speed and safety pull in different directions, and you have to choose deliberately.</b> The research didn't make the decision for me. It gave me the evidence to make it confidently, and to defend it to leadership.</li>
+          <li><b>Qualitative feedback fills the gaps numbers can't.</b> On timing alone, the existing behaviour looked best. Participants' reactions explained why Alert was the right call. If I'd only looked at the numbers, I'd have shipped the wrong solution.</li>
+          <li><b>Bring stakeholders into the research, not just the readout.</b> When I presented the results, I spent time getting people to trust the data. Watching a participant try to work out what happened to their selection is more convincing than any slide. Next time I'd invite them into the sessions.</li>
+        </ol>
+      </section>
+
+      <section class="act" id="next" aria-labelledby="next-title">
+        <header class="act-head"><p class="label">What's next</p><h2 id="next-title">From safety net <em>to no net.</em></h2></header>
+        <p>The alert solves the awareness problem: guests now know when their customizations are about to be reset. The better long-term answer is <b>modifier persistence</b>: keeping a guest's customizations automatically when they change variant, wherever the new variant supports the same options.</p>
+        <p>That's a harder engineering problem, because variants don't always share the same modifier sets, which is why it wasn't in scope for this release. But it's the right next step.</p>
+        <p class="goal">The alert is a safety net. The goal is to not need one.</p>
+      </section>
+
+      <nav class="pager" aria-label="More work">
+        <a href="/#work"><span class="label">Keep exploring</span><strong>← Back to all work</strong></a>
+      </nav>
+    </article>
+  </div>
+</main>
+
+<footer class="on-ink cs-footer" id="contact">
+  <div class="wrap">
+    <p class="cs-footer-line">Good things happen when <em>curious minds</em> meet.</p>
+    <p class="contact-links"><a class="email" href="mailto:anvita.sodhi@gmail.com">anvita.sodhi@gmail.com</a> <a href="https://www.linkedin.com/in/anvitasodhi" rel="me">LinkedIn ↗</a></p>
+  </div>
+  <div class="site-footer"><div class="wrap"><span>© 2026 Anvita Sodhi</span><span>Images shown with permission; some details omitted for confidentiality.</span></div></div>
+</footer>
+<p class="preview-banner" role="status">Preview mode: drafts are visible. The live site hides them.</p>
+</body>
+</html>
