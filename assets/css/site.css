@@ -1209,3 +1209,6 @@ body { transition: background-color .4s var(--ease), color .4s var(--ease); }
   .ledger-row .fig { text-align: right; padding-right: clamp(1rem, 3vw, 3rem); }
 
 }
+/* Contact links: share one baseline, underlines at the same distance */
+.contact-links { align-items: baseline; }
+.contact-links a { text-underline-offset: 6px; text-decoration-thickness: 1px; }
