@@ -1375,3 +1375,5 @@ body { transition: background-color .4s var(--ease), color .4s var(--ease); }
 }
 .band .ba-pair .cs-figure img { border-radius: 10px; transition: transform .45s var(--ease), box-shadow .45s var(--ease); }
 .band .ba-pair .zoomable:hover img { transform: translateY(-4px); box-shadow: 0 22px 34px -18px rgba(36,35,33,.4); }
+.device--cream video { padding-top: 2.4rem; background: #F9F6F0; }
+@media (prefers-reduced-motion: no-preference) { .band .fx-list li:nth-child(5) { --i: 5; } }
