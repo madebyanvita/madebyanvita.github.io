@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en-CA" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mobile Checkout · Anvita Sodhi</title>
+<meta name="description" content="Case study: rebuilding mobile checkout in the Tim Hortons app. A 14-person workshop set the structure, payment and store confirmation became one screen, and guests who reached payment went from 74.7% to 84.5% completing their order.">
+<link rel="canonical" href="https://madebyanvita.github.io/work/checkout.html">
+<meta name="theme-color" content="#F4F1EB">
+<script>(function(){var t;try{t=localStorage.getItem("theme")}catch(e){}document.documentElement.setAttribute("data-theme",t||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"))})()</script>
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Anvita Sodhi">
+<meta property="og:title" content="Mobile Checkout: two screens, one decision">
+<meta property="og:description" content="Rebuilding checkout in the Tim Hortons app: a 14-person workshop, one screen instead of two, and measuring the part that changed.">
+<meta property="og:url" content="https://madebyanvita.github.io/work/checkout.html">
+<meta property="og:image" content="https://madebyanvita.github.io/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/site.css?v=b784a040">
+<script src="../assets/js/site.js?v=468f314c" defer></script>
+</head>
+<body class="case">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="../">Anvita Sodhi</a>
+    <div class="header-end">
+    <nav class="site-nav" aria-label="Primary">
+      <a href="../#work" aria-current="page">Work</a>
+      <a href="../#experience">Experience</a>
+      <a href="../#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Dark mode" title="Lights off"><svg viewBox="0 0 26 12" aria-hidden="true"><rect class="tt-lens" x="1" y="1.5" width="10" height="8.5" rx="3.6"/><rect class="tt-lens" x="15" y="1.5" width="10" height="8.5" rx="3.6"/><rect class="tt-frame" x="1" y="1.5" width="10" height="8.5" rx="3.6"/><rect class="tt-frame" x="15" y="1.5" width="10" height="8.5" rx="3.6"/><path class="tt-frame" d="M11 4.5 C 12 3, 14 3, 15 4.5"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="cs-hero">
+    <div class="wrap">
+      <p class="cs-crumb"><a href="../#work">← All work</a></p>
+      <div class="cs-hero-split">
+        <div class="cs-hero-text">
+        <p class="label cs-kicker">Case study 04 · Tim Hortons · Checkout &amp; payments</p>
+        <h1 class="cs-title">Mobile Checkout: two screens, <em>one decision.</em></h1>
+        <p class="cs-lede">Checkout is where everything the Tim Hortons app does to win an order either pays off or falls apart. Ours had grown into separate payment and store-confirmation screens, on a front end that predated the design system. I led the redesign end to end. I ran a workshop that got 14 people from product, engineering and content to agree on how checkout should be structured, merged payment and store confirmation into one screen, and rebuilt it on design-system components. After launch, guests who reached payment completed their order 84.5% of the time, up from 74.7%.</p>
+        </div>
+        <figure class="cs-hero-media cs-hero-media--phone">
+          <div class="device"><img src="../assets/img/work/checkout/pk-place.jpg?v=ae56a935" alt="The redesigned Place order screen: pickup info with prep time Now, the restaurant and In-restaurant, then payment with the total, a saved Visa, Pay with card and Pay with Apple Pay" width="750" height="1756" fetchpriority="high"></div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap cs-impact" aria-label="Impact">
+    <dl class="cs-stats cs-stats--4">
+      <div><dt>Of guests who reached payment placed their order: 74.7% before, 84.5% after</dt><dd>+9.8<small>pts</small></dd></div>
+      <div><dt>Of guests who reached the cart placed their order: 65.9% before, 73.3% after</dt><dd>+7.4<small>pts</small></dd></div>
+      <div><dt>Faster from payment to placed order: 38 seconds became 30</dt><dd>−21<small>%</small></dd></div>
+      <div><dt>Stakeholders from product, engineering and content aligned in one workshop</dt><dd>14</dd></div>
+    </dl>
+    <dl class="cs-facts">
+      <div><dt>Role</dt><dd>Lead product designer: workshop, competitive and legacy audits, UX and UI, handoff and post-launch measurement</dd></div>
+      <div><dt>Team</dt><dd>1 product manager, 3–4 engineers, QA and the payments platform team</dd></div>
+      <div><dt>Scope</dt><dd>Cart, payment method selection, wallet and stored payments, one-screen checkout and order confirmation, for pickup and delivery</dd></div>
+      <div><dt>Shipped</dt><dd>December 10, 2025, with outcomes measured over the three months after launch</dd></div>
+    </dl>
+  </section>
+
+  <section class="cs-glance" aria-labelledby="owned-title">
+    <div class="wrap">
+      <h2 id="owned-title" class="label">Three decisions I drove</h2>
+      <ol class="owned">
+        <li>
+          <p class="owned-n">01</p>
+          <h3>Agree on structure before pixels</h3>
+          <p>The flow had been shaped by years of technical constraints. Before designing anything, I got directors, product managers, engineering leads and content in a room to decide how checkout should be ordered.</p>
+          <a class="owned-link" href="#workshop">The workshop →</a>
+        </li>
+        <li>
+          <p class="owned-n">02</p>
+          <h3>Make two screens one</h3>
+          <p>13 of 14 participants treated where you order and how you get it as a single decision. That made the case for merging payment and store confirmation into one screen.</p>
+          <a class="owned-link" href="#shipped">What shipped →</a>
+        </li>
+        <li>
+          <p class="owned-n">03</p>
+          <h3>Measure the part we changed</h3>
+          <p>App-wide conversion rose 0.6 points. Inside checkout, the steps we rebuilt, completion rose 7.4 points. Knowing which number answers which question matters.</p>
+          <a class="owned-link" href="#results">The results →</a>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <div class="wrap cs-layout">
+    <nav class="cs-toc" aria-label="On this page">
+      <p class="label">On this page</p>
+      <ol>
+        <li><a href="#mess">The mess</a></li>
+        <li><a href="#meaning">The meaning</a></li>
+        <li><a href="#work-act">The work</a></li>
+        <li><a href="#proof">The proof</a></li>
+        <li><a href="#learnings">Learnings</a></li>
+        <li><a href="#next">What's next</a></li>
+      </ol>
+    </nav>
+
+    <article class="cs-body">
+      <!-- ACT I -->
+      <section class="act" id="mess" aria-labelledby="mess-title">
+        <header class="act-head"><p class="label">Act I</p><h2 id="mess-title">The <em>mess.</em></h2></header>
+
+        <h3>A checkout built up in layers</h3>
+        <p>The Tim Hortons app is one of Canada's most-used quick-service restaurant apps, and checkout is where every order is won or lost. Over several iterations it had piled up friction: too many steps, inconsistent payment UI, and a confirmation screen that left guests unsure their order had gone through.</p>
+        <p>For a pickup order, a guest went from the cart to a payment screen, then to a separate screen to confirm the restaurant, and only then placed the order.</p>
+        <h3>Three problems underneath</h3>
+        <ol class="priorities priorities--grid">
+          <li><b>A legacy front end.</b> Significant business logic lived in the front end, and the flow had never moved to the new design system. That meant stability issues, slower development and longer fixes when something broke.</li>
+          <li><b>Service modes almost nobody used.</b> Dine-in and Curbside were under 1% of Mobile Order &amp; Pay sales but carried a disproportionate share of logic and maintenance.</li>
+          <li><b>A two-step checkout.</b> Guests spent around 37 seconds across separate payment and store-confirmation screens, which raised the risk of drop-off at the most expensive point to lose them.</li>
+        </ol>
+        <p>Together they slowed checkout, drove support tickets and limited how fast the team could modernize ordering.</p>
+
+        <h3>Everything that could go wrong</h3>
+        <p>Before redesigning anything, I catalogued every error state in the old flow, from unavailable items to declined cards and tip limits, so each one could be redesigned on the new components too.</p>
+        <figure class="cs-figure band band--rail">
+          <div class="rail-head"><span class="label">Six failure states</span><span class="rail-nav"><button type="button" class="rail-btn" data-dir="-1" aria-label="Previous screens">←</button><button type="button" class="rail-btn" data-dir="1" aria-label="Next screens">→</button></span></div>
+          <div class="screens rail" tabindex="0" aria-label="Old error states, scrollable">
+            <div class="screen-item"><span class="screen-label">Items unavailable</span><img class="screen" src="../assets/img/work/checkout/err-1.jpg?v=da7b255d" alt="Old Items Unavailable dialog: some items aren't available at this location, with Remove items or Cancel" width="480" height="1041" loading="lazy"></div>
+            <div class="screen-item"><span class="screen-label">Cart unavailable</span><img class="screen" src="../assets/img/work/checkout/err-2.jpg?v=58322f2a" alt="Old Cart Unavailable dialog asking the guest to remove the items" width="480" height="1041" loading="lazy"></div>
+            <div class="screen-item"><span class="screen-label">Card details</span><img class="screen" src="../assets/img/work/checkout/err-3.jpg?v=fc3bca61" alt="Old payment error: Oops, card details are incorrect, over the payment screen" width="480" height="1041" loading="lazy"></div>
+            <div class="screen-item"><span class="screen-label">Card details, pickup</span><img class="screen" src="../assets/img/work/checkout/err-4.jpg?v=97365edb" alt="The same card error over the old store-confirmation screen" width="480" height="1041" loading="lazy"></div>
+            <div class="screen-item"><span class="screen-label">Tip: numbers only</span><img class="screen" src="../assets/img/work/checkout/err-5.jpg?v=cea25fbe" alt="Old delivery tip field showing an error that the amount must be numeric" width="480" height="1041" loading="lazy"></div>
+            <div class="screen-item"><span class="screen-label">Tip limit</span><img class="screen" src="../assets/img/work/checkout/err-6.jpg?v=6100502c" alt="Old delivery tip field showing an error that the tip exceeds the limit" width="480" height="1041" loading="lazy"></div>
+          </div>
+          <figcaption>Error states in the old checkout, audited before the redesign.</figcaption>
+        </figure>
+
+        <h3>What success meant</h3>
+        <ol class="priorities priorities--grid priorities--3">
+          <li><b>One screen, not two.</b> Merge payment and store confirmation into a single checkout step.</li>
+          <li><b>Faster for returning guests.</b> Cut end-to-end checkout time by at least 15%.</li>
+          <li><b>Built on the system.</b> Raise design-system coverage in the cart screens to 90% of UI elements.</li>
+        </ol>
+        <p class="goal"><span class="label">The real question</span>Not what checkout should look like, but how it should be structured, and how to get people with very different priorities to agree on it.</p>
+      </section>
+
+      <!-- ACT II -->
+      <section class="act" id="meaning" aria-labelledby="meaning-title">
+        <header class="act-head"><p class="label">Act II</p><h2 id="meaning-title">The <em>meaning.</em></h2></header>
+
+        <h3 id="workshop">Alignment first, as a design step</h3>
+        <p>The existing flow had grown out of technical constraints and one-off decisions. Redesigning it alone would have meant defending my assumptions against everyone else's in every review. Instead, I brought the people who would approve, build and write checkout into one workshop to agree on structure first.</p>
+        <p><b>14 people took part:</b> directors, product managers, engineering leads and content partners. Having decision-makers and the people who'd build it in the same room meant strategic and practical concerns surfaced together, not weeks apart.</p>
+        <p>I broke checkout into seven sections and asked each person to arrange them by what felt most logical to guests, what had to be confirmed before placing an order, and what belonged together.</p>
+        <figure class="cs-figure stage stage--tight">
+          <img src="../assets/img/work/checkout/board.jpg?v=b15750b5" alt="The workshop board: fourteen columns of coloured sticky notes, each participant's own order of the seven checkout sections, with names replaced by P1 to P14" width="1920" height="960" loading="lazy">
+          <figcaption>The workshop board. Every column is one person's checkout. Names are replaced to keep participants anonymous.</figcaption>
+        </figure>
+
+        <h3>Where 14 people put each section</h3>
+        <p>I tallied every board into one table: for each section, how many people placed it at each step. Darker means more agreement.</p>
+        <div class="heat-wrap">
+          <table class="heat">
+            <caption class="visually-hidden">Number of participants, out of 14, who placed each section at each step of checkout</caption>
+            <thead><tr><th scope="col">Section</th><th scope="col">1</th><th scope="col">2</th><th scope="col">3</th><th scope="col">4</th><th scope="col">5</th><th scope="col">6</th><th scope="col">7</th></tr></thead>
+            <tbody>
+              <tr><th scope="row"><span class="sw sw--m"></span>Ordering method</th><td class="hi" style="--n:13">13</td><td class="is-empty"><span class="visually-hidden">0</span></td><td class="is-empty"><span class="visually-hidden">0</span></td><td class="is-empty"><span class="visually-hidden">0</span></td><td style="--n:1">1</td><td class="is-empty"><span class="visually-hidden">0</span></td><td class="is-empty"><span class="visually-hidden">0</span></td></tr>
+              <tr><th scope="row"><span class="sw sw--l"></span>Ordering location</th><td class="hi" style="--n:7">7</td><td class="hi" style="--n:6">6</td><td class="is-empty"><span class="visually-hidden">0</span></td><td style="--n:1">1</td><td class="is-empty"><span class="visually-hidden">0</span></td><td class="is-empty"><span class="visually-hidden">0</span></td><td class="is-empty"><span class="visually-hidden">0</span></td></tr>
+              <tr><th scope="row"><span class="sw sw--u"></span>Upsell</th><td class="is-empty"><span class="visually-hidden">0</span></td><td style="--n:4">4</td><td class="hi" style="--n:6">6</td><td style="--n:2">2</td><td style="--n:2">2</td><td class="is-empty"><span class="visually-hidden">0</span></td><td class="is-empty"><span class="visually-hidden">0</span></td></tr>
+              <tr><th scope="row"><span class="sw sw--o"></span>Order summary</th><td style="--n:1">1</td><td style="--n:1">1</td><td style="--n:4">4</td><td style="--n:3">3</td><td style="--n:4">4</td><td style="--n:1">1</td><td class="is-empty"><span class="visually-hidden">0</span></td></tr>
+              <tr><th scope="row"><span class="sw sw--r"></span>Rewards</th><td class="is-empty"><span class="visually-hidden">0</span></td><td style="--n:4">4</td><td style="--n:5">5</td><td style="--n:4">4</td><td style="--n:1">1</td><td class="is-empty"><span class="visually-hidden">0</span></td><td class="is-empty"><span class="visually-hidden">0</span></td></tr>
+              <tr><th scope="row"><span class="sw sw--p"></span>Prep time</th><td class="is-empty"><span class="visually-hidden">0</span></td><td class="is-empty"><span class="visually-hidden">0</span></td><td class="is-empty"><span class="visually-hidden">0</span></td><td style="--n:3">3</td><td style="--n:3">3</td><td class="hi" style="--n:7">7</td><td class="is-empty"><span class="visually-hidden">0</span></td></tr>
+              <tr><th scope="row"><span class="sw sw--y"></span>Payment</th><td class="is-empty"><span class="visually-hidden">0</span></td><td class="is-empty"><span class="visually-hidden">0</span></td><td class="is-empty"><span class="visually-hidden">0</span></td><td style="--n:2">2</td><td style="--n:3">3</td><td style="--n:3">3</td><td class="hi" style="--n:6">6</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="caption">Steps 1 to 7, from the start of checkout to the end. One participant left prep time out entirely.</p>
+
+        <h3>What the room agreed on</h3>
+        <ol class="findings">
+          <li><b>Location and method are one decision.</b> 13 of 14 grouped where they order with how they get it. The old flow split them across screens. This finding is what justified merging store confirmation and service mode into one section.</li>
+          <li><b>Upsell belongs next to the order summary.</b> 9 of 14 grouped them. Guests are most open to add-ons while they're reviewing what they've chosen, so the suggestion helps instead of interrupting an earlier decision.</li>
+          <li><b>Prep time comes right before payment.</b> 9 of 14 put it there. Guests want to know when their order will be ready before they commit to paying for it.</li>
+        </ol>
+        <h3>How the best apps do it</h3>
+        <p>Alongside the workshop, I reviewed checkout in Uber Eats, DoorDash, Starbucks and other ordering apps. It wasn't a one-off exercise: as each part of checkout took shape, I went back to see how others had solved that specific piece. The goal wasn't to copy patterns but to understand them: how top apps group store, service mode and payment; where they place upsell and rewards; how they make wallet-first checkout fast; and how they handle carts left behind.</p>
+        <figure class="cs-figure screens-fig band band--pair">
+          <div class="screens">
+            <div class="screen-item"><span class="screen-label">Uber Eats · Pickup</span><img class="screen" src="../assets/img/work/checkout/ue-cp.jpg?v=57c9d85c" alt="Uber Eats pickup checkout: delivery or pickup, the store, distance, pickup time and order summary on one screen" width="480" height="1025" loading="lazy"></div>
+            <div class="screen-item"><span class="screen-label">Uber Eats · Tip</span><img class="screen" src="../assets/img/work/checkout/ue-ct.jpg?v=512817bd" alt="Uber Eats Add a tip screen with preset tip amounts and Place order" width="480" height="1025" loading="lazy"></div>
+          </div>
+          <figcaption>Store, pickup time and payment on one screen became the model for Place order. Tipping as its own step became our delivery tip step. Screens via Mobbin.</figcaption>
+        </figure>
+        <p>The review confirmed the direction: the strongest apps consolidate steps, keep confirmation light and put wallets first. It also helped separate what was a real industry norm from what was just a constraint of our legacy flow. Patterns like a mini cart and an upsell before the cart were worth exploring too; they became concepts we weighed below.</p>
+        <p>I also mapped both legacy flows, pickup and delivery, screen by screen, so every requirement buried in the old screens was accounted for before anything was removed.</p>
+      </section>
+
+      <!-- ACT III -->
+      <section class="act" id="work-act" aria-labelledby="work-title">
+        <header class="act-head"><p class="label">Act III</p><h2 id="work-title">The <em>work.</em></h2></header>
+
+        <h3 id="evolution">From a 1:1 rebuild to one screen</h3>
+        <p>I didn't start with the answer. The first step was a 1:1 rebuild: every legacy screen mapped onto the new design system, keeping the same steps, so we had a lower-risk baseline and a complete inventory of what each screen did. Other structural explorations ran alongside it. The workshop came next, and it decided how the final flow should be structured. From there I reworked the UX and UI into the version that shipped.</p>
+        <div class="evo band">
+          <div class="evo-row">
+            <p class="evo-label"><b>Legacy</b><span>Three screens to pay. 38 seconds from payment to placed order.</span></p>
+            <div class="screens evo-screens">
+              <div class="screen-item"><span class="screen-label">Cart</span><img class="screen" src="../assets/img/work/checkout/evo-l-cart.jpg?v=312784f6" alt="Legacy cart with Tims Rewards, order details and Pick Up or Dine In" width="480" height="1039" loading="lazy"></div>
+              <div class="screen-item"><span class="screen-label">Payment</span><img class="screen" src="../assets/img/work/checkout/evo-l-pay.jpg?v=2150a988" alt="Legacy Order Payment screen with accepted cards, a saved Visa and Continue" width="480" height="1039" loading="lazy"></div>
+              <div class="screen-item"><span class="screen-label">Confirm store</span><img class="screen" src="../assets/img/work/checkout/evo-l-store.jpg?v=90a771e9" alt="Legacy store confirmation with a restaurant photo and Place Secure Order" width="480" height="1039" loading="lazy"></div>
+            </div>
+          </div>
+          <div class="evo-row">
+            <p class="evo-label"><b>1:1 rebuild</b><span>The same three steps, rebuilt on the new design system.</span></p>
+            <div class="screens evo-screens">
+              <div class="screen-item"><span class="screen-label">Checkout</span><img class="screen" src="../assets/img/work/checkout/evo-m-cart.jpg?v=03256039" alt="1:1 rebuild of the cart: Tims Rewards, order details with Pickup, Drive-thru or Dine in" width="480" height="1039" loading="lazy"></div>
+              <div class="screen-item"><span class="screen-label">Payment</span><img class="screen" src="../assets/img/work/checkout/evo-m-pay.jpg?v=37621c32" alt="1:1 rebuild of payment: total, saved Visa, Pay with card or Pay with Apple Pay" width="480" height="1039" loading="lazy"></div>
+              <div class="screen-item"><span class="screen-label">Confirm store</span><img class="screen" src="../assets/img/work/checkout/evo-m-store.jpg?v=3c62e7f3" alt="1:1 rebuild of store confirmation: a map, order details and Place Secure Order" width="480" height="1039" loading="lazy"></div>
+            </div>
+          </div>
+          <div class="evo-row evo-row--new">
+            <p class="evo-label"><b>Shipped</b><span>Two screens. 30 seconds from payment to placed order.</span></p>
+            <div class="screens evo-screens">
+              <div class="screen-item"><span class="screen-label">Review order</span><img class="screen" src="../assets/img/work/checkout/evo-n-review.jpg?v=7f9f4e0b" alt="Shipped Review order: Tims Rewards, pickup info with In-restaurant or Drive-thru, and prep time" width="480" height="1039" loading="lazy"></div>
+              <div class="screen-item"><span class="screen-label">Place order</span><img class="screen" src="../assets/img/work/checkout/evo-n-place.jpg?v=c7efb344" alt="Shipped Place order: pickup info and payment with Pay with card or Apple Pay on one screen" width="480" height="1039" loading="lazy"></div>
+            </div>
+          </div>
+        </div>
+
+        <h3>Three ideas we didn't ship, and why</h3>
+        <p>Alongside the 1:1 rebuild, we explored structural changes that would have pushed checkout further. All three were directionally strong. None fit this release, and being clear about that early kept the scope focused.</p>
+        <div class="v1">
+          <div class="v1-group">
+            <p class="label">Concept A</p>
+            <ul>
+              <li><b>A mini cart with its own upsell</b>A light add-on moment before the full cart, to capture revenue earlier and declutter the cart.</li>
+              <li><b>Why not</b>It needed new cart-state handling and extra API orchestration, beyond the scope of the refactor.</li>
+            </ul>
+          </div>
+          <div class="v1-group">
+            <p class="label">Concept B</p>
+            <ul>
+              <li><b>Choosing prep time on the payment screen</b>Ask about timing at the moment of commitment. What shipped comes close: guests choose it on Review order and see it confirmed right above payment.</li>
+              <li><b>Why not</b>It depended on store and method APIs and backend sequencing, and would have needed refresh logic that risked destabilizing the flow.</li>
+            </ul>
+          </div>
+          <div class="v1-group">
+            <p class="label">Concept C</p>
+            <ul>
+              <li><b>Pickup or delivery on the payment screen</b>Group the final decisions together and make the cart shorter.</li>
+              <li><b>Why not</b>Changing method recalculates price, tax and availability. Moving it meant significant API rework and risked the payment logic.</li>
+            </ul>
+          </div>
+        </div>
+        <p>The common limit was architecture: we had to keep the existing linear, one-screen-per-step flow, and the scope was improving the backend, not rebuilding it. They remain good ideas for when that changes.</p>
+
+        <h3>Removing what guests didn't use</h3>
+        <p>Dine-in and Curbside made up under 1% of Mobile Order &amp; Pay sales but added logic to every order. As a group, we decided to remove them, simplifying both the logic and the choices guests see.</p>
+        <h3 id="shipped">What shipped</h3>
+        <p>Checkout became two screens: one to review the order, and one to confirm and pay. Both were rebuilt on design-system components, with editable sections, clear headers and inline validation, so guests can change the restaurant or service mode without losing progress. Here's how the workshop's findings show up in the pickup flow.</p>
+        <figure class="cs-figure annot band">
+          <div class="annot-long">
+            <span class="screen-label">1 · Review order</span>
+            <div class="pin-wrap"><img class="screen" src="../assets/img/work/checkout/pk-review.jpg?v=fbdeedb3" alt="The full Review order screen for pickup: Tims Rewards, Pickup info with the restaurant, In-restaurant or Drive-thru and prep time, Your order with each item, totals, You may also like with three add-ons, and Continue" width="560" height="2598" loading="lazy"><span class="pin" style="left:2.5%;top:22%" aria-hidden="true">1</span><span class="pin" style="left:2.5%;top:36%" aria-hidden="true">2</span><span class="pin" style="left:2.5%;top:78%" aria-hidden="true">3</span></div>
+          </div>
+          <div class="annot-side">
+            <span class="screen-label">2 · Place order</span>
+            <div class="pin-wrap"><img class="screen" src="../assets/img/work/checkout/pk-place.jpg?v=ae56a935" alt="Place order for pickup: Pickup info with prep time Now, the restaurant and In-restaurant, then Payment with the total, a saved Visa, Pay with card and Pay with Apple Pay" width="750" height="1756" loading="lazy"><span class="pin" style="left:2.5%;top:53%" aria-hidden="true">4</span></div>
+            <ol class="annot-notes">
+              <li><b>Where and how, together.</b> The restaurant and the pickup method share one card, because 13 of 14 people treated them as one decision.</li>
+              <li><b>Timing before paying.</b> Guests choose when their order should be ready before they reach payment, where 9 of 14 placed it.</li>
+              <li><b>Add-ons next to the order.</b> "You may also like" sits directly under the order summary, as 9 of 14 grouped them.</li>
+              <li><b>One screen to pay.</b> Prep time, restaurant and pickup method are confirmed right above payment. This screen replaced the separate payment and store-confirmation screens.</li>
+            </ol>
+          </div>
+        </figure>
+
+        <p>Delivery follows the same structure. Tipping got its own short step between the two, as in the competitor flows we'd reviewed, so the place-order screen holds only what a guest needs to confirm.</p>
+        <figure class="cs-figure screens-fig band band--pair">
+          <div class="screens">
+            <div class="screen-item"><span class="screen-label">Review order · Delivery</span><img class="screen" src="../assets/img/work/checkout/dlv-review.jpg?v=39f52bfb" alt="Review order for delivery: Tims Rewards, then Delivery info with the address, ETA, unit, delivery instructions and a required phone number" width="560" height="1663" loading="lazy"></div>
+            <div class="screen-item"><span class="screen-label">Place order · Delivery</span><img class="screen" src="../assets/img/work/checkout/dlv-place.jpg?v=f4f76afb" alt="Place order for delivery: Delivery info with ETA, address, unit, instructions and phone, then Payment with tip, total, a saved Visa, Pay with card and Pay with Apple Pay" width="664" height="1974" loading="lazy"></div>
+          </div>
+          <figcaption>Where it's going and how it's paid for, confirmed on one screen.</figcaption>
+        </figure>
+
+        <ol class="fx-list">
+          <li><b>Wallet-ready.</b> The place-order screen supports Apple Pay and Google Pay alongside saved cards, for near one-tap checkout.</li>
+          <li><b>Carts that make sense when guests come back.</b> I defined clearer rules for abandoned carts, so a returning guest doesn't hit a stale store or an item that's no longer available.</li>
+          <li><b>A foundation engineering can move fast on.</b> Less logic in the front end and shared components made checkout easier to update and test, which matters most when a payment issue needs a fast fix.</li>
+        </ol>
+
+        <h3>Designing the states, not just the screens</h3>
+        <p>The order confirmation had to work for every combination of service mode and prep time, so I mapped each one.</p>
+        <ol class="findings">
+          <li><b>Pickup, ordered for later.</b> The confirmation shows the time preparation will start, with a "Prepare now" option. Tapping it asks guests to confirm before the kitchen starts.</li>
+          <li><b>Pickup, ordered for now.</b> No choices left to make: the confirmation shows the pickup details, the order and a link to the receipt.</li>
+          <li><b>Drive-thru.</b> Guests can't change the pickup time. They go to the window and say their name, and the team member recalls the order from the point-of-sale system to start preparing it.</li>
+        </ol>
+        <p>Once the main screens were settled, I redesigned the error states from the audit on the same components.</p>
+      </section>
+
+      <!-- ACT IV -->
+      <section class="act act--proof" id="proof" aria-labelledby="proof-title">
+        <header class="act-head"><p class="label">Act IV</p><h2 id="proof-title">The <em>proof.</em></h2></header>
+
+        <h3 id="results">The results</h3>
+        <p>The new checkout launched on December 10, 2025. We compared the same ordering funnel before launch and over the three months after.</p>
+        <div class="proof-hero">
+          <p class="big-fig">+9.8<small>pts</small></p>
+          <div>
+            <p class="big-fig-label">Of guests who reached payment, 84.5% placed their order, up from 74.7%.</p>
+            <p>This is the stretch we merged. Before, guests had to get through two screens after payment; now they get through one.</p>
+          </div>
+        </div>
+
+        <p class="label pref-label">Of guests who reached the cart, how many placed an order</p>
+        <div class="bars" role="table" aria-label="Share of guests who reached the cart and placed an order, before and after launch">
+          <div class="bar-row" role="row"><span role="rowheader" class="bar-name">Before</span><span role="cell" class="bar-track"><span class="bar" style="--v:65.9;--max:84.5"></span><b>65.9%</b></span></div>
+          <div class="bar-row bar-row--chosen" role="row"><span role="rowheader" class="bar-name">After</span><span role="cell" class="bar-track"><span class="bar" style="--v:73.3;--max:84.5"></span><b>73.3%</b></span></div>
+        </div>
+        <p class="label pref-label">Of guests who reached payment, how many placed an order</p>
+        <div class="bars" role="table" aria-label="Share of guests who reached payment and placed an order, before and after launch">
+          <div class="bar-row" role="row"><span role="rowheader" class="bar-name">Before</span><span role="cell" class="bar-track"><span class="bar" style="--v:74.7;--max:84.5"></span><b>74.7%</b></span></div>
+          <div class="bar-row bar-row--chosen" role="row"><span role="rowheader" class="bar-name">After</span><span role="cell" class="bar-track"><span class="bar" style="--v:84.5;--max:84.5"></span><b>84.5%</b></span></div>
+        </div>
+        <p class="label pref-label">Average time from payment to placed order</p>
+        <div class="bars" role="table" aria-label="Average time from the payment screen to a placed order, before and after launch">
+          <div class="bar-row" role="row"><span role="rowheader" class="bar-name">Before</span><span role="cell" class="bar-track"><span class="bar" style="--v:38;--max:38"></span><b>38s</b></span></div>
+          <div class="bar-row bar-row--chosen" role="row"><span role="rowheader" class="bar-name">After</span><span role="cell" class="bar-track"><span class="bar" style="--v:30;--max:38"></span><b>30s</b></span></div>
+        </div>
+        <p class="caption">Before: 16 seconds on payment and 22 on store confirmation. Before-and-after comparison of the same funnel, not a controlled experiment.</p>
+
+        <h3>Reading the whole funnel honestly</h3>
+        <p>Across the whole app, end-to-end conversion rose from 37.6% to 38.2%, and average time to order fell from 3.4 to 3.19 minutes, about 12 to 15 seconds faster. Those numbers are smaller because they include steps checkout doesn't touch. Over the same period, drop-off between the menu and the cart rose from 21.3% to 28.8%, well before a guest ever sees checkout.</p>
+        <p>One number inside checkout moved the wrong way: the step from cart to payment slipped from 88.1% to 86.8%. Everything after payment improved more than enough to make up for it, but it's the step I'd look at first.</p>
+        <dl class="cs-stats proof-stats">
+          <div><dt>End-to-end conversion, 37.6% to 38.2%</dt><dd>+0.6<small>pts</small></dd></div>
+          <div><dt>Faster average time to order, 3.4 to 3.19 minutes</dt><dd>12–15<small>s</small></dd></div>
+          <div><dt>Screens to pay for a pickup order, down from two</dt><dd>1</dd></div>
+        </dl>
+      </section>
+
+      <section class="act" id="learnings" aria-labelledby="learnings-title">
+        <header class="act-head"><p class="label">Learnings</p><h2 id="learnings-title">What I'm <em>taking with me.</em></h2></header>
+        <ol class="learnings">
+          <li><b>Alignment is a design deliverable.</b> The workshop settled the structure before any screen existed. Because 14 people had already agreed on the order, design reviews were about details, not direction.</li>
+          <li><b>Measure the part you changed.</b> End-to-end conversion is the number leadership asks for, but it blends in everything else happening in the app. Looking at the steps we rebuilt showed the real effect, and showed exactly where to look next.</li>
+          <li><b>A clear "not now" is part of the design.</b> Three strong concepts didn't fit the architecture. Being explicit about why, instead of forcing them in, kept the release focused and kept the ideas alive for when the backend changes.</li>
+        </ol>
+      </section>
+
+      <section class="act" id="next" aria-labelledby="next-title">
+        <header class="act-head"><p class="label">What's next</p><h2 id="next-title">Checkout is <em>never done.</em></h2></header>
+        <p>The results said the direction was right. The next iterations are about precision.</p>
+        <ul class="wip">
+          <li><b>Testing the payment component</b>Internal feedback said the payment component could be confusing for some guests, so I ran an A/B test on it.</li>
+          <li><b>Swipe to delete, now live</b>Small improvements to the cart, designed with engineering, like swiping to remove an item.</li>
+        </ul>
+        <p class="goal">Checkout is a signal, not a finish line.</p>
+      </section>
+
+      <nav class="pager" aria-label="More work">
+        <a href="/#work"><span class="label">Keep exploring</span><strong>← Back to all work</strong></a>
+      </nav>
+    </article>
+  </div>
+</main>
+
+<footer class="on-ink cs-footer" id="contact">
+  <div class="wrap">
+    <p class="cs-footer-line">Good things happen when <em>curious minds</em> meet.</p>
+    <p class="contact-links"><a class="email" href="mailto:anvita.sodhi@gmail.com">anvita.sodhi@gmail.com</a> <a href="https://www.linkedin.com/in/anvitasodhi" rel="me">LinkedIn ↗</a></p>
+  </div>
+  <div class="site-footer"><div class="wrap"><span>© 2026 Anvita Sodhi</span><span>Designed and built by me.</span></div></div>
+</footer>
+<p class="preview-banner" role="status">Preview mode: drafts are visible. The live site hides them.</p>
+</body>
+</html>

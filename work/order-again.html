@@ -19,8 +19,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400..800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/site.css?v=d7694e03">
-<script src="../assets/js/site.js?v=d55786e9" defer></script>
+<link rel="stylesheet" href="../assets/css/site.css?v=b784a040">
+<script src="../assets/js/site.js?v=468f314c" defer></script>
 </head>
 <body class="case">
 <a class="skip" href="#main">Skip to content</a>
@@ -121,7 +121,7 @@
         <h3>Two tabs, one job</h3>
         <p>Returning guests are the most valuable guests in any ordering app. They already know what they want and they're already motivated to order. The only thing between them and a completed order is how quickly the app gets out of their way.</p>
         <p>The Tim Hortons app gave them two ways back to what they love: <b>Recents</b>, a log of past orders, and <b>Favourites</b>, a list guests saved by hand. On paper both served the same goal. In practice they split one job across two tabs, asked guests to keep two mental models of their order history, and made Favourites a list guests had to curate to keep useful. Most weren't doing that work.</p>
-        <figure class="cs-figure screens-fig">
+        <figure class="cs-figure screens-fig band band--pair">
           <div class="screens">
             <div class="screen-item"><span class="screen-label">Recents</span><img class="screen" src="../assets/img/work/order-again/before-recents.jpg?v=abda48c1" alt="The old Recents tab: past orders listed by date, each with a Reorder button, heart icons and items with modifiers" width="375" height="811" loading="lazy"></div>
             <div class="screen-item"><span class="screen-label">Favourites</span><img class="screen" src="../assets/img/work/order-again/before-favs.jpg?v=7ea578cb" alt="The old Favourites tab: saved orders with Order Now, Edit and Remove" width="375" height="811" loading="lazy"></div>
@@ -172,7 +172,7 @@
 
         <h3 id="directions">Four directions, before any detail</h3>
         <p>With Favourites gone, the question became what the new reorder list should look like. Rather than design one answer in isolation, I took four directions to the team early, each a genuinely different idea of how reordering should work, not a visual variation. Putting them side by side forced a real conversation about trade-offs instead of a review of one preferred solution.</p>
-        <div class="dirs">
+        <div class="dirs band">
           <figure class="cs-figure dir">
             <img class="screen" src="../assets/img/work/order-again/dir-a.jpg?v=8d945a44" alt="Direction A: past orders grouped by date, each with a Reorder button and every item listed with a plus button" width="420" height="958" loading="lazy">
             <figcaption><b>A. Whole orders and items.</b> Closest to the old Recents, but long, duplicated lists for guests who order the same thing every day.</figcaption>
@@ -220,7 +220,7 @@
           <li><b>Every modifier, shown in full.</b> Seeing exactly what was in a past item prevents ordering mistakes.</li>
           <li><b>No quantity.</b> Tapping + again is faster than adding a quantity control, and removing it kept the card and the checkout cleaner.</li>
         </ol>
-        <figure class="cs-figure screens-fig">
+        <figure class="cs-figure screens-fig band band--pair band--small">
           <div class="screens">
             <div class="screen-item"><span class="screen-label">Fixed height</span><img class="screen" src="../assets/img/work/order-again/card-fixed.jpg?v=bc4bfa26" alt="Order again list with fixed card heights: long names and modifiers are cut off with ellipses" width="216" height="444" loading="lazy"></div>
             <div class="screen-item"><span class="screen-label">Adjustable height</span><img class="screen" src="../assets/img/work/order-again/card-adjustable.jpg?v=d8219e02" alt="Order again list with adjustable card heights: each card grows to show the full modifier list" width="216" height="444" loading="lazy"></div>
@@ -239,7 +239,7 @@
           <figcaption>Adding items to the cart, plus the three micro-animation explorations. Use the Flows list to switch between them. <a href="https://www.figma.com/proto/dMMPRP1nJSD3jigyUQKOFO/MO-P?node-id=111-10619&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=31%3A23553&amp;starting-point-node-id=111%3A10619&amp;show-proto-sidebar=1" target="_blank" rel="noopener">Open full screen in Figma</a></figcaption>
         </figure>
         <h3>The shipped flow</h3>
-        <div class="fx">
+        <div class="fx band">
           <figure class="fx-video fx-video--native">
             <video class="screen" src="../assets/img/work/order-again/flow.mp4?v=a735a571" poster="../assets/img/work/order-again/flow-poster.jpg" width="720" height="1466" controls muted loop playsinline preload="none" aria-label="Screen recording of the shipped Order again tab in the Tim Hortons app: adding items, opening one to customize, and the cart count rising to four"></video>
             <figcaption>Order again in the live Tim Hortons app.</figcaption>
@@ -269,7 +269,7 @@
         </div>
         <p class="label edge-label">Unavailable items</p>
         <p>Past items aren't always orderable: the restaurant may not offer them, the daypart may not allow them (no lunch at breakfast), or they may no longer be sold. I mocked up three ways to handle it: an "Item unavailable" tag on the card, a dismissible banner at the top, or hiding those items entirely.</p>
-        <div class="dirs dirs--3">
+        <div class="dirs dirs--3 band">
           <figure class="cs-figure dir">
             <div class="pin-wrap"><img class="screen" src="../assets/img/work/order-again/unavail-1.jpg?v=090dbeb0" alt="Option 1: unavailable items stay in the list with a grey Item unavailable tag on the card" width="259" height="660" loading="lazy"><span class="pin" style="left:58%;top:61.5%" aria-hidden="true">1</span></div>
             <figcaption><b>1. Tag on the card.</b> The item stays in place, greyed out with an "Item unavailable" tag. Clear, but the list fills with things guests can't order.</figcaption>

@@ -237,3 +237,32 @@
     });
   });
 })();
+
+/* Screen bands: rise in when they scroll into view; rails scroll with arrow buttons */
+(function () {
+  var bands = document.querySelectorAll('.band');
+  if (bands.length) {
+    if (!('IntersectionObserver' in window)) bands.forEach(function (b) { b.classList.add('is-in'); });
+    else {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } });
+      }, { threshold: 0.15 });
+      bands.forEach(function (b) { io.observe(b); });
+    }
+  }
+  document.querySelectorAll('.band--rail').forEach(function (fig) {
+    var rail = fig.querySelector('.rail'), btns = fig.querySelectorAll('.rail-btn');
+    if (!rail) return;
+    function sync() {
+      var max = rail.scrollWidth - rail.clientWidth - 2;
+      btns.forEach(function (b) { b.disabled = b.dataset.dir < 0 ? rail.scrollLeft <= 2 : rail.scrollLeft >= max; });
+      fig.classList.toggle('rail-static', max <= 0);
+    }
+    btns.forEach(function (b) {
+      b.addEventListener('click', function () { rail.scrollBy({ left: b.dataset.dir * rail.clientWidth * 0.8, behavior: 'smooth' }); });
+    });
+    rail.addEventListener('scroll', sync, { passive: true });
+    addEventListener('resize', sync);
+    sync();
+  });
+})();
