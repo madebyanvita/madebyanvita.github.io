@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en-CA" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Design system, AI-ready · Anvita Sodhi</title>
+<meta name="description" content="Exploration: rebuilding the Tim Hortons colour system as 45 Material 3 roles that AI tools and Figma both build from, plus a guided intake that turns a screen request into a reviewable wireframe.">
+<link rel="canonical" href="https://madebyanvita.github.io/work/design-system-ai.html">
+<meta name="theme-color" content="#F4F1EB">
+<script>(function(){var t;try{t=localStorage.getItem("theme")}catch(e){}document.documentElement.setAttribute("data-theme",t||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"))})()</script>
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Anvita Sodhi">
+<meta property="og:title" content="Teaching the design system to speak code">
+<meta property="og:description" content="An exploration in Cursor, GitHub and Figma: a 45-role colour system for light and dark, and a guided intake for screen requests.">
+<meta property="og:url" content="https://madebyanvita.github.io/work/design-system-ai.html">
+<meta property="og:image" content="https://madebyanvita.github.io/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/site.css?v=279aabf3">
+<script src="../assets/js/site.js?v=468f314c" defer></script>
+</head>
+<body class="case">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="../">Anvita Sodhi</a>
+    <div class="header-end">
+    <nav class="site-nav" aria-label="Primary">
+      <a href="../#work" aria-current="page">Work</a>
+      <a href="../#experience">Experience</a>
+      <a href="../#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Dark mode" title="Lights off"><svg viewBox="0 0 26 12" aria-hidden="true"><rect class="tt-lens" x="1" y="1.5" width="10" height="8.5" rx="3.6"/><rect class="tt-lens" x="15" y="1.5" width="10" height="8.5" rx="3.6"/><rect class="tt-frame" x="1" y="1.5" width="10" height="8.5" rx="3.6"/><rect class="tt-frame" x="15" y="1.5" width="10" height="8.5" rx="3.6"/><path class="tt-frame" d="M11 4.5 C 12 3, 14 3, 15 4.5"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="cs-hero">
+    <div class="wrap">
+      <p class="cs-crumb"><a href="../#work">← All work</a></p>
+      <div class="cs-hero-split cs-hero-split--stack">
+        <div class="cs-hero-text">
+        <p class="label cs-kicker">Case study 05 · Tim Hortons · Exploration, not shipped</p>
+        <h1 class="cs-title">Teaching the design system <em>to speak code.</em></h1>
+        <p class="cs-lede">Design and product would agree on a direction; engineering would build something slightly different. There was no shared, structured source that both sides worked from. I explored closing that gap with AI tools. In Cursor, I rebuilt the Tim Hortons colour system as 45 Material 3 roles that generate Figma variables for light and dark mode, and tested them against real flows. I also designed a guided intake that turns a screen request into a reviewable wireframe. It paused before production, so this is about the thinking and the craft, not a launch.</p>
+        </div>
+        <figure class="cs-hero-media bp-hero-media">
+          <img src="../assets/img/work/blueprint/roles-light.jpg?v=9925047f" alt="The Tim Hortons colour system in light mode: Primary, Secondary, Tertiary and Error columns of colour roles, a surface ladder and utility roles" width="1600" height="794" fetchpriority="high">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap cs-impact" aria-label="At a glance">
+    <dl class="cs-stats cs-stats--4">
+      <div><dt>Colour roles, built on Material 3 and filled with the Tim Hortons palette</dt><dd>45</dd></div>
+      <div><dt>Modes from one set of role names: switching theme is a variable swap</dt><dd>2</dd></div>
+      <div><dt>Catalogue screens across 6 guest journeys</dt><dd>15<small>+</small></dd></div>
+      <div><dt>Golden-path scenarios to test generated screens against</dt><dd>5</dd></div>
+    </dl>
+    <dl class="cs-facts">
+      <div><dt>Role</dt><dd>Product designer: colour system, screen intake, prototype and test screens</dd></div>
+      <div><dt>Worked with</dt><dd>Another designer on layout and component rules, a copywriter on content rules, engineers on the schema</dd></div>
+      <div><dt>Tools</dt><dd>Cursor, GitHub, Figma variables, Figma MCP, HTML prototypes</dd></div>
+      <div><dt>Status</dt><dd>Exploration, 2026. Paused before production</dd></div>
+    </dl>
+  </section>
+
+  <section class="cs-glance" aria-labelledby="owned-title">
+    <div class="wrap">
+      <h2 id="owned-title" class="label">Three things I built</h2>
+      <ol class="owned">
+        <li>
+          <p class="owned-n">01</p>
+          <h3>A colour system AI can read</h3>
+          <p>45 roles named for the job a colour does, not its shade, so light and dark mode share one vocabulary and Figma variables come straight from it.</p>
+          <a class="owned-link" href="#colour">The colour system →</a>
+        </li>
+        <li>
+          <p class="owned-n">02</p>
+          <h3>A fix the automation missed</h3>
+          <p>The AI's first pass got the toggle switch wrong. I went back to Material 3's switch anatomy and tested seven pairings until one worked in both modes.</p>
+          <a class="owned-link" href="#toggle">The toggle →</a>
+        </li>
+        <li>
+          <p class="owned-n">03</p>
+          <h3>A front door for screen requests</h3>
+          <p>A short guided intake that infers the structure of a screen from a catalogue, and defaults to a wireframe so nobody polishes the wrong idea.</p>
+          <a class="owned-link" href="#intake">The intake →</a>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <div class="wrap cs-layout">
+    <nav class="cs-toc" aria-label="On this page">
+      <p class="label">On this page</p>
+      <ol>
+        <li><a href="#mess">The mess</a></li>
+        <li><a href="#meaning">The meaning</a></li>
+        <li><a href="#work-act">The work</a></li>
+        <li><a href="#learnings">Learnings</a></li>
+        <li><a href="#next">Where it stands</a></li>
+      </ol>
+    </nav>
+
+    <article class="cs-body">
+      <section class="act" id="mess" aria-labelledby="mess-title">
+        <header class="act-head"><p class="label">Act I</p><h2 id="mess-title">The <em>mess.</em></h2></header>
+
+        <h3>Agreed in the room, different in the build</h3>
+        <p>Design, product and engineering were aligned on paper but worked in parallel tracks. Product and design would settle on a direction, then engineering would build it independently, and the result often drifted from what had been agreed.</p>
+        <ol class="priorities priorities--grid">
+          <li><b>Requests arrived in pieces.</b> Intent was scattered across Slack threads and tickets, so every screen started with reassembling what was actually being asked.</li>
+          <li><b>Mocks came before structure.</b> High-fidelity Figma screens were built before anyone had agreed how the screen should work, which hid structural mistakes under polish.</li>
+          <li><b>The same debates, every sprint.</b> "Modal or push?", which navigation title, which controls: settled again each time, with copy invented on the spot.</li>
+        </ol>
+        <p>A new app initiative, and the design-system refresh that came with it, was the chance to fix this at the root rather than paper over it with more meetings.</p>
+        <p class="goal"><span class="label">The real question</span>Could design and engineering build from the same structured source, one that people and AI tools could both read?</p>
+      </section>
+
+      <section class="act" id="meaning" aria-labelledby="meaning-title">
+        <header class="act-head"><p class="label">Act II</p><h2 id="meaning-title">The <em>meaning.</em></h2></header>
+
+        <h3>Three goals</h3>
+        <ol class="priorities priorities--grid priorities--3">
+          <li><b>Move faster, together.</b> Close the gap between what design and product agree on and what engineering ships.</li>
+          <li><b>One consistent foundation.</b> Tokens that work the same in light and dark mode, so theming is a variable swap, not a redesign.</li>
+          <li><b>Build for AI, not just people.</b> Rules clear enough that designers and AI agents like Cursor and the Figma MCP can build from them directly.</li>
+        </ol>
+
+        <h3>How a brief moves through the system</h3>
+        <p>The model was simple: a brief, a prompt or a rough sketch becomes a <b>blueprint</b>, a structured description of the screen. Copy, assessments, a prototype or code, and the Figma design are all generated from that one blueprint, and every output is built on the same tokens, patterns and rules.</p>
+        <figure class="cs-figure cs-figure--wide">
+          <img src="../assets/img/work/blueprint/flow.jpg?v=90b6a560" alt="Flow diagram: a prescriptive prompt, brief, rough idea or sketch creates a Blueprint. From the Blueprint come copy and translations, a copy assessment, an assessment, a prototype or code, and a Figma design, all resting on tokens, the design system, patterns and rules." width="1600" height="916" loading="lazy">
+          <figcaption>One blueprint drives copy, assessment, prototype or code, and the Figma design, all from the same foundation.</figcaption>
+        </figure>
+      </section>
+
+      <section class="act" id="work-act" aria-labelledby="work-title">
+        <header class="act-head"><p class="label">Act III</p><h2 id="work-title">The <em>work.</em></h2></header>
+
+        <h3 id="colour">A colour system named for the job, not the shade</h3>
+        <p>Rather than invent a token system from scratch, I built on Material Design 3's architecture: roles like <i>surface</i>, <i>on surface</i> and <i>primary container</i>, instead of names tied to a specific colour. One role name works in both modes; the theme decides the value, so nobody re-derives it screen by screen.</p>
+        <p>In Cursor, I wrote this down as a structured 45-role colour system and generated Figma variables directly from it, with light and dark mode bound to the same role names. In dark mode, Tim Hortons primary becomes yellow, not red, and every screen follows without being redrawn.</p>
+        <figure class="cs-figure cs-figure--wide bp-modes">
+          <div class="proto-switch bp-modes-switch" role="group" aria-label="Show the colour roles in">
+            <button type="button" data-mode="light" aria-pressed="true">Light</button>
+            <button type="button" data-mode="dark" aria-pressed="false">Dark</button>
+          </div>
+          <div class="bp-modes-frame" data-show="light">
+            <img class="bp-mode bp-mode--light" src="../assets/img/work/blueprint/roles-light.jpg?v=9925047f" alt="Colour roles in light mode: primary is Tim Hortons red, surfaces are warm off-whites" width="1600" height="794" loading="lazy">
+            <img class="bp-mode bp-mode--dark" src="../assets/img/work/blueprint/roles-dark.jpg?v=297b8b4d" alt="The same colour roles in dark mode: primary becomes yellow, surfaces become deep coffee browns" width="1600" height="789" loading="lazy">
+          </div>
+          <figcaption>The same 45 role names in light and dark mode. Switch between them: only the values change.</figcaption>
+        </figure>
+
+        <h3 id="toggle">Where the automation got it wrong</h3>
+        <p>AI-generated tokens still need a designer's eye. Testing the system against real screens surfaced gaps the automation missed, and the clearest was the toggle switch: the first pass didn't treat the off-state track correctly, so the switch almost disappeared on dark surfaces.</p>
+        <p>I went back to Material 3's own switch anatomy, then tested seven stroke candidates against the same track, checking contrast and whether each one stayed on-palette. The working pair was <b>surface container highest</b> as the track fill and <b>outline</b> as the stroke, at 5.6:1 against the track, in both light and dark mode.</p>
+        <figure class="cs-figure cs-figure--wide">
+          <img src="../assets/img/work/blueprint/toggle.jpg?v=97b9e877" alt="Seven toggle switch cards on a dark background, each testing a different stroke colour for the off-state track, with contrast ratios. The outline token at 5.6 to 1 is marked as the Material 3 default; others are labelled too faint, warm but weak, too loud, reference only, Tim Hortons alternative and off-palette." width="1600" height="1145" loading="lazy">
+          <figcaption>Seven stroke candidates for the off-state track, each with its contrast against the track fill. Outline, top left, was the one that held up.</figcaption>
+        </figure>
+        <p class="pull">Generated isn't the same as designed.</p>
+
+        <h3>Rules for structure, not just colour</h3>
+        <p>Tokens define what a colour does. A second layer of rules defines how content and controls are arranged. With another designer, I wrote a first pass of layout and component guidance, and with a copywriter, content rules for consistent microcopy.</p>
+        <ul class="wip">
+          <li><b>Layout</b>Surface hierarchy, sections, page padding and margins, grids and scroll behaviour.</li>
+          <li><b>Fields and controls</b>Text, link, action, input, checkbox, radio, toggle, stepper and segmented control.</li>
+          <li><b>Feedback and loading</b>When to use alerts, modals or sheets; skeletons versus spinners; busy states and lost connectivity.</li>
+          <li><b>App patterns</b>Page headers, sticky footers, keyboards, navigation stacks, back behaviour and form validation.</li>
+        </ul>
+        <figure class="cs-figure cs-figure--wide">
+          <img src="../assets/img/work/blueprint/rules.jpg?v=f7d3914d" alt="The guidance checklist: feedback, loading states, navigation, layout, fields and UI on the left; page headers, footers, keyboards, navigation bar, back behaviour and forms on the right" width="1600" height="1104" loading="lazy">
+          <figcaption>The scope of the rules: what a generated screen has to get right beyond colour.</figcaption>
+        </figure>
+        <p>These rules were written but not yet tested against real screens. That would have been the next validation pass, using the same method that caught the toggle: apply the rule, build a real screen with it, fix what doesn't hold up.</p>
+
+        <h3 id="intake">A front door for screen requests</h3>
+        <p>The tokens decide what a screen looks like. The intake decides how a request is structured before anyone opens Figma. I designed it as a guided wizard backed by a single catalogue of journeys and screens.</p>
+        <div class="bp-split">
+          <div>
+            <p>Instead of a designer, or an AI agent, guessing at modal versus push, the navigation title or which controls apply, the system infers them from the catalogue after a few branching questions: is this an existing flow or a new one, what should the guest get done, and where does it live in the app?</p>
+            <p>The output defaults to a <b>wireframe first</b>. High fidelity and code or Figma generation are later, opt-in steps, because polish that arrives too early hides the wrong structural decisions.</p>
+            <p>The same intake runs in Cursor chat and in a browser preview, so one set of logic serves both AI-agent work and manual design work.</p>
+          </div>
+          <figure class="cs-figure bp-intake">
+            <img src="../assets/img/work/blueprint/intake.jpg?v=1f902353" alt="Intake flowchart: What are you building today? Existing flow or new? Existing leads to journey area and screen pick, then customize item. New leads to guest outcome, where it lives in the app, and primary action. Both lead to an inferred proposal, confirm once, and generate the blueprint file." width="900" height="1618" loading="lazy">
+            <figcaption>The intake: a few questions, one inferred proposal, one confirmation.</figcaption>
+          </figure>
+        </div>
+
+        <h3>From blueprint to screen</h3>
+        <p>To see whether the pieces held together, I built an HTML prototype with screen-building and test-screen views. Each example blueprint renders in a fixed iPhone-sized frame next to its spec, with every region of the screen mapped to its blueprint control, its code component and its catalogue entry, and previewable in its default, error and submitting states.</p>
+        <figure class="cs-figure cs-figure--wide">
+          <img src="../assets/img/work/blueprint/test-screen.jpg?v=122670d9" alt="The test screens view: a Sign in screen generated from a blueprint, with default, error and submitting states, next to its blueprint spec and a table mapping each screen region to blueprint control, code component and catalogue doc" width="1600" height="1082" loading="lazy">
+          <figcaption>A sign-in screen rendered from its blueprint, with the spec that produced it.</figcaption>
+        </figure>
+        <dl class="bp-owned">
+          <div><dt>I owned</dt><dd><ul>
+            <li>The colour system and Figma variables</li>
+            <li>The intake: existing versus new, and the journey catalogue</li>
+            <li>The wireframe-first deliverable model</li>
+            <li>The folder structure for the design repo</li>
+            <li>The HTML prototype: screen building and test screens</li>
+          </ul></dd></div>
+          <div><dt>I collaborated on</dt><dd><ul>
+            <li>Layout and component rules, with another designer</li>
+            <li>Content rules, with a copywriter</li>
+            <li>The blueprint schema and CI, with engineering</li>
+            <li>Design-system handoff documentation in Figma</li>
+          </ul></dd></div>
+        </dl>
+      </section>
+
+      <section class="act" id="learnings" aria-labelledby="learnings-title">
+        <header class="act-head"><p class="label">Learnings</p><h2 id="learnings-title">What I'm <em>taking with me.</em></h2></header>
+        <ol class="learnings">
+          <li><b>Design-systems work starts before the components.</b> Designing how a request enters the system mattered as much as the tokens it ends up using.</li>
+          <li><b>AI needs constraints to be useful.</b> A catalogue and inferred rules gave the tools something to reason with. Open-ended prompts gave them room to guess.</li>
+          <li><b>Test in context, not on a grid.</b> The toggle looked fine as a swatch. It only failed on a real screen, and a designer's eye is what caught it.</li>
+        </ol>
+      </section>
+
+      <section class="act" id="next" aria-labelledby="next-title">
+        <header class="act-head"><p class="label">Where it stands</p><h2 id="next-title">Paused, <em>not finished.</em></h2></header>
+        <p>The work paused before it went into production. The system lived in its own design repo, separate from engineering's codebase. The next steps would have been:</p>
+        <ul class="wip">
+          <li><b>One source of truth</b>Merge the design and engineering repos, so both sides build from the same files, not parallel copies.</li>
+          <li><b>Test the rules</b>Run the layout and component rules against real screens, the way the colour system was tested.</li>
+          <li><b>More golden paths</b>Expand the scenarios that generated screens are checked against.</li>
+          <li><b>A prompt in the room</b>Product, design and engineering react to a rough generated screen together, instead of waiting days for a first mock.</li>
+        </ul>
+        <p class="goal">The intake turns a brief into structure. The tokens turn structure into something that looks and feels like Tim Hortons.</p>
+      </section>
+
+      <nav class="pager pager--two" aria-label="More work">
+        <a href="/#work"><span class="label">Keep exploring</span><strong>← All work</strong></a>
+        <a class="next" href="kiosk.html"><span class="label">Next case study</span><strong>Kiosk redesign →</strong></a>
+      </nav>
+    </article>
+  </div>
+</main>
+
+<footer class="on-ink cs-footer" id="contact">
+  <div class="wrap">
+    <p class="cs-footer-line">Good things happen when <em>curious minds</em> meet.</p>
+    <p class="contact-links"><a class="email" href="mailto:anvita.sodhi@gmail.com">anvita.sodhi@gmail.com</a> <a href="https://www.linkedin.com/in/anvitasodhi" rel="me">LinkedIn ↗</a></p>
+  </div>
+  <div class="site-footer"><div class="wrap"><span>© 2026 Anvita Sodhi</span><span>Designed and built by me.</span></div></div>
+</footer>
+<script>
+document.querySelectorAll('.bp-modes').forEach(function (fig) {
+  var frame = fig.querySelector('.bp-modes-frame');
+  fig.querySelectorAll('[data-mode]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      frame.dataset.show = b.dataset.mode;
+      fig.querySelectorAll('[data-mode]').forEach(function (o) { o.setAttribute('aria-pressed', String(o === b)); });
+    });
+  });
+});
+</script>
+</body>
+</html>

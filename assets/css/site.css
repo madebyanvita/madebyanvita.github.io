@@ -1367,3 +1367,32 @@ body { transition: background-color .4s var(--ease), color .4s var(--ease); }
   .headline { grid-column: 1 / 9; }
   .hero-portrait { grid-column: 9 / -1; grid-row: 1; align-self: center; width: 100%; max-width: min(21.25rem, 44svh); margin: 0 0 0 auto; }
 }
+
+/* ---------- Design system exploration (draft) ---------- */
+.bp-modes-frame { display: grid; }
+.bp-modes-frame > * { grid-area: 1 / 1; transition: opacity .35s var(--ease), visibility .35s; }
+.bp-modes-frame[data-show="light"] > :has(.bp-mode--dark), .bp-modes-frame[data-show="light"] > .bp-mode--dark,
+.bp-modes-frame[data-show="dark"] > :has(.bp-mode--light), .bp-modes-frame[data-show="dark"] > .bp-mode--light { opacity: 0; visibility: hidden; }
+.bp-split { display: grid; gap: var(--s-3) var(--col-gap); align-items: start; }
+.bp-intake { margin: 0; max-width: 22rem; }
+@media (min-width: 48rem) { .bp-split { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); } .bp-intake { max-width: none; } }
+.bp-owned { display: grid; gap: var(--s-3) var(--col-gap); margin-block: var(--s-4); padding-top: var(--s-2); border-top: 2px solid var(--ink); }
+@media (min-width: 44rem) { .bp-owned { grid-template-columns: 1fr 1fr; } }
+.bp-owned dt { font-size: var(--t-sm); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; margin-bottom: .6rem; }
+.bp-owned ul { display: grid; gap: .45rem; }
+.bp-owned li { padding-left: 1.1rem; position: relative; }
+.bp-owned li::before { content: ""; position: absolute; left: 0; top: .6em; width: .45rem; height: .45rem; border-radius: 50%; background: var(--lilac); }
+.bp-owned div:last-child li::before { background: transparent; border: 1.5px solid var(--lilac); }
+.cs-hero-split--stack { grid-template-columns: minmax(0, 1fr) !important; }
+.cs-hero-split--stack .cs-hero-text { max-width: 52rem; }
+.bp-hero-media img { border: 1px solid var(--rule); border-radius: .6rem; box-shadow: 0 1.5rem 3rem -1.5rem rgb(36 35 33 / .25); }
+/* Design system + AI cover: the same tiles swap from light to dark values, and the toggle flips */
+.cover-icon--ds .ds-dark { opacity: 0; }
+@media (prefers-reduced-motion: no-preference) {
+  .cover-icon--ds .ds-light { animation: ds-out 6s ease-in-out infinite; }
+  .cover-icon--ds .ds-dark  { animation: ds-in 6s ease-in-out infinite; }
+  .cover-icon--ds .ds-thumb { animation: ds-thumb 6s ease-in-out infinite; }
+}
+@keyframes ds-in  { 0%, 40% { opacity: 0; } 50%, 90% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes ds-out { 0%, 40% { opacity: 1; } 50%, 90% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes ds-thumb { 0%, 40% { transform: none; } 50%, 90% { transform: translateX(32px); } 100% { transform: none; } }
