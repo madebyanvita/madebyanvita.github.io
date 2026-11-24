@@ -1348,3 +1348,4 @@ body { transition: background-color .4s var(--ease), color .4s var(--ease); }
 .device--cream video { padding-top: 2.4rem; background: #F9F6F0; }
 @media (prefers-reduced-motion: no-preference) { .band .fx-list li:nth-child(5) { --i: 5; } }
 @media (min-width: 40rem) { .xp-row { grid-template-columns: 5.5rem minmax(0, 1fr); column-gap: 1rem; } }
+@media (max-width: 33.99rem) { .pager--two { grid-template-columns: 1fr; gap: var(--s-3); } .pager--two .next { text-align: left; justify-items: start; } }
