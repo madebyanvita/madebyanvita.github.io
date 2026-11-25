@@ -1396,3 +1396,12 @@ body { transition: background-color .4s var(--ease), color .4s var(--ease); }
 @keyframes ds-in  { 0%, 40% { opacity: 0; } 50%, 90% { opacity: 1; } 100% { opacity: 0; } }
 @keyframes ds-out { 0%, 40% { opacity: 1; } 50%, 90% { opacity: 0; } 100% { opacity: 1; } }
 @keyframes ds-thumb { 0%, 40% { transform: none; } 50%, 90% { transform: translateX(32px); } 100% { transform: none; } }
+/* Paintings: the full photographs, uncropped, in a three-column masonry */
+.gallery--art { display: block; columns: 1; column-gap: var(--col-gap); }
+.gallery--art .art { break-inside: avoid; margin-bottom: var(--col-gap); }
+.gallery--art .art-frame { border: 0; background: none; display: block; }
+.gallery--art .art-frame img { height: auto; object-fit: initial; display: block; }
+@media (min-width: 40rem) { .gallery--art { columns: 2; } }
+@media (min-width: 64rem) { .gallery--art { columns: 3; } }
+.gallery--art .art:nth-child(n) { margin-top: 0; }
+#creative .section-intro b { color: var(--ink); }
