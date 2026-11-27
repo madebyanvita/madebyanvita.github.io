@@ -115,7 +115,7 @@
     var i = document.createElement('img'); i.src = img.currentSrc || img.src; i.alt = img.alt; fig.appendChild(i);
     return fig;
   }
-  imgs.forEach(function (img) {
+  function wire(img) {
     var b = document.createElement('button');
     b.type = 'button'; b.className = 'zoomable';
     var pair = img.closest('.ba-pair'), group = img.closest('.screens, .dirs');
@@ -147,7 +147,9 @@
       document.documentElement.classList.add('has-lightbox');
       dlg.showModal(); stage.scrollTo(0, 0);
     });
-  });
+  }
+  imgs.forEach(wire);
+  window.zoomWire = wire; /* lets content added later (e.g. unlocked screens) open in the lightbox */
 })();
 
 /* Card cover icons: play a short animation when the card scrolls into view, and again on hover or focus */

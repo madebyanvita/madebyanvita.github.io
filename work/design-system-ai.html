@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Design system, AI-ready · Anvita Sodhi</title>
-<meta name="description" content="Exploration: rebuilding the Tim Hortons colour system as 45 Material 3 roles that AI tools and Figma both build from, plus a guided intake that turns a screen request into a reviewable wireframe.">
+<title>Design system + AI · Anvita Sodhi</title>
+<meta name="description" content="How I turned our design decisions into an AI skill our team prototypes and builds front end with: a 45-role colour system, rules for components and states, and an intake that turns a request into a prototype.">
 <link rel="canonical" href="https://madebyanvita.github.io/work/design-system-ai.html">
 <meta name="theme-color" content="#F4F1EB">
 <script>(function(){var t;try{t=localStorage.getItem("theme")}catch(e){}document.documentElement.setAttribute("data-theme",t||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"))})()</script>
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Anvita Sodhi">
-<meta property="og:title" content="Teaching the design system to speak code">
-<meta property="og:description" content="An exploration in Cursor, GitHub and Figma: a 45-role colour system for light and dark, and a guided intake for screen requests.">
+<meta property="og:title" content="I taught our design system to build with us">
+<meta property="og:description" content="A skill our team uses to prototype and build front end: a 45-role colour system, rules for components and states, and an intake that turns a request into a prototype.">
 <meta property="og:url" content="https://madebyanvita.github.io/work/design-system-ai.html">
 <meta property="og:image" content="https://madebyanvita.github.io/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -19,8 +19,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400..800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/site.css?v=4b0c0d09">
-<script src="../assets/js/site.js?v=468f314c" defer></script>
+<link rel="stylesheet" href="../assets/css/site.css?v=949edbd8">
+<script src="../assets/js/site.js?v=166da137" defer></script>
 </head>
 <body class="case">
 <a class="skip" href="#main">Skip to content</a>
@@ -44,37 +44,57 @@
   <section class="cs-hero">
     <div class="wrap">
       <p class="cs-crumb"><a href="../#work">← All work</a></p>
-      <div class="cs-hero-split cs-hero-split--stack">
+      <div class="cs-hero-split bp-hero-split">
         <div class="cs-hero-text">
-        <p class="label cs-kicker">Case study 05 · Tim Hortons · Exploration, not shipped</p>
-        <h1 class="cs-title">Teaching the design system <em>to speak code.</em></h1>
-        <p class="cs-lede">Design and product would agree on a direction; engineering would build something slightly different. There was no shared, structured source that both sides worked from. I explored closing that gap with AI tools. In Cursor, I rebuilt the Tim Hortons colour system as 45 Material 3 roles that generate Figma variables for light and dark mode, and tested them against real flows. I also designed a guided intake that turns a screen request into a reviewable wireframe. It paused before production, so this is about the thinking and the craft, not a launch.</p>
+        <p class="label cs-kicker">Case study 05 · Tim Hortons · Design system + AI</p>
+        <h1 class="cs-title">I taught our design system <em>to build with us.</em></h1>
+        <p class="cs-lede">Design and product would agree on a direction, and engineering would build something slightly different, because our decisions lived in people's heads, not anywhere a person or a tool could read. With another designer, I wrote those decisions down as a <b>skill</b>: a Markdown file of rules that AI tools load in our prototyping sandbox. I owned the colour system underneath it, and the intake that turns a request into a prototype. Our team now uses it to design and to build front end. A prototype that took two or three days now takes about half a day. It isn't perfect, and we're still refining it.</p>
         </div>
-        <figure class="cs-hero-media bp-hero-media">
-          <img src="../assets/img/work/blueprint/roles-light.jpg?v=9925047f" alt="The Tim Hortons colour system in light mode: Primary, Secondary, Tertiary and Error columns of colour roles, a surface ladder and utility roles" width="1600" height="794" fetchpriority="high">
+        <figure class="cs-hero-media bp-live" data-mode="light">
+          <div class="bp-live-screen" aria-hidden="true">
+            <div class="bp-live-top"><span>Your order</span><span class="bp-live-dot"></span></div>
+            <div class="bp-live-card">
+              <span class="bp-live-cup"></span>
+              <span><b>Original Blend</b><small>Medium · 1 milk</small></span>
+            </div>
+            <div class="bp-live-chips"><span>Hot</span><span class="on">Iced</span></div>
+            <div class="bp-live-row"><span>Round up for charity</span><span class="bp-live-switch"><i></i></span></div>
+            <span class="bp-live-btn">Add to order</span>
+          </div>
+          <ul class="bp-live-roles" aria-hidden="true">
+            <li><i style="--l:#C9112F;--d:#FFC647"></i>primary</li>
+            <li><i style="--l:#FFFFFF;--d:#332727"></i>on primary</li>
+            <li><i style="--l:#FFFFFF;--d:#1B1314"></i>surface</li>
+            <li><i style="--l:#E4DBCC;--d:#504643"></i>surface container highest</li>
+            <li><i style="--l:#3F221F;--d:#FFFFFF"></i>on surface</li>
+          </ul>
+          <figcaption>
+            <button type="button" class="bp-live-toggle" role="switch" aria-checked="false"><span class="bp-live-knob"></span><span class="bp-live-label">Light</span></button>
+            Same role names, two modes. Only the values change.
+          </figcaption>
         </figure>
       </div>
     </div>
   </section>
 
-  <section class="wrap cs-impact" aria-label="At a glance">
+  <section class="wrap cs-impact" aria-label="What changed">
     <dl class="cs-stats cs-stats--4">
+      <div><dt>To a working prototype, down from 2–3 days (our team's estimate)</dt><dd>½<small> day</small></dd></div>
       <div><dt>Colour roles, built on Material 3 and filled with the Tim Hortons palette</dt><dd>45</dd></div>
       <div><dt>Modes from one set of role names: switching theme is a variable swap</dt><dd>2</dd></div>
-      <div><dt>Catalogue screens across 6 guest journeys</dt><dd>15<small>+</small></dd></div>
-      <div><dt>Golden-path scenarios to test generated screens against</dt><dd>5</dd></div>
+      <div><dt>Catalogue screens across 6 guest journeys that the intake draws from</dt><dd>15<small>+</small></dd></div>
     </dl>
     <dl class="cs-facts">
-      <div><dt>Role</dt><dd>Product designer: colour system, screen intake, prototype and test screens</dd></div>
-      <div><dt>Worked with</dt><dd>Another designer on layout and component rules, a copywriter on content rules, engineers on the schema</dd></div>
-      <div><dt>Tools</dt><dd>Cursor, GitHub, Figma variables, Figma MCP, HTML prototypes</dd></div>
-      <div><dt>Status</dt><dd>Exploration, 2026. Paused before production</dd></div>
+      <div><dt>Role</dt><dd>Product designer: colour system, skill rules, intake, components, prototype and test screens</dd></div>
+      <div><dt>Worked with</dt><dd>Another designer on the skill's rules, a copywriter on content rules, engineers on front end</dd></div>
+      <div><dt>Tools</dt><dd>Cursor, GitHub, Markdown skills, Figma variables, Figma MCP</dd></div>
+      <div><dt>Status</dt><dd>In use, 2026. Our team designs and builds front end with it, and we're still refining it</dd></div>
     </dl>
   </section>
 
   <section class="cs-glance" aria-labelledby="owned-title">
     <div class="wrap">
-      <h2 id="owned-title" class="label">Three things I built</h2>
+      <h2 id="owned-title" class="label">What I built</h2>
       <ol class="owned">
         <li>
           <p class="owned-n">01</p>
@@ -90,8 +110,8 @@
         </li>
         <li>
           <p class="owned-n">03</p>
-          <h3>A front door for screen requests</h3>
-          <p>A short guided intake that infers the structure of a screen from a catalogue, and defaults to a wireframe so nobody polishes the wrong idea.</p>
+          <h3>From a few questions to a prototype</h3>
+          <p>My workflow for finding out what someone actually needs, turned into an intake. Answer a short series of questions, and the skill builds a first prototype.</p>
           <a class="owned-link" href="#intake">The intake →</a>
         </li>
       </ol>
@@ -106,7 +126,7 @@
         <li><a href="#meaning">The meaning</a></li>
         <li><a href="#work-act">The work</a></li>
         <li><a href="#learnings">Learnings</a></li>
-        <li><a href="#next">Where it stands</a></li>
+        <li><a href="#next">What's next</a></li>
       </ol>
     </nav>
 
@@ -121,8 +141,11 @@
           <li><b>Mocks came before structure.</b> High-fidelity Figma screens were built before anyone had agreed how the screen should work, which hid structural mistakes under polish.</li>
           <li><b>The same debates, every sprint.</b> "Modal or push?", which navigation title, which controls: settled again each time, with copy invented on the spot.</li>
         </ol>
+        <p>AI tools could already generate screens quickly. But they didn't know any of our decisions: not our colours, not how our error states work, not which component to use where. Fast output that ignores the system just creates more cleanup.</p>
+        <p>Speed brought a second problem. When anyone can make a credible-looking screen in minutes, it's tempting for everyone to go off and build ideas alone. There's nothing wrong with brainstorming, but it wastes time when people end up doing each other's jobs, and work can slip through without the right experts ever seeing it. We wanted to <b>decide together, not in isolation</b>.</p>
+        <p class="pull">The tools will always produce a design. The question is whether it's the right one.</p>
         <p>A new app initiative, and the design-system refresh that came with it, was the chance to fix this at the root rather than paper over it with more meetings.</p>
-        <p class="goal"><span class="label">The real question</span>Could design and engineering build from the same structured source, one that people and AI tools could both read?</p>
+        <p class="goal"><span class="label">The real question</span>What if everything we already knew about designing this app was written down once, in a form both people and AI tools could build from?</p>
       </section>
 
       <section class="act" id="meaning" aria-labelledby="meaning-title">
@@ -135,18 +158,67 @@
           <li><b>Build for AI, not just people.</b> Rules clear enough that designers and AI agents like Cursor and the Figma MCP can build from them directly.</li>
         </ol>
 
-        <h3>How a brief moves through the system</h3>
-        <p>The model was simple: a brief, a prompt or a rough sketch becomes a <b>blueprint</b>, a structured description of the screen. Copy, assessments, a prototype or code, and the Figma design are all generated from that one blueprint, and every output is built on the same tokens, patterns and rules.</p>
-        <figure class="cs-figure cs-figure--wide">
-          <img src="../assets/img/work/blueprint/flow.jpg?v=90b6a560" alt="Flow diagram: a prescriptive prompt, brief, rough idea or sketch creates a Blueprint. From the Blueprint come copy and translations, a copy assessment, an assessment, a prototype or code, and a Figma design, all resting on tokens, the design system, patterns and rules." width="1600" height="916" loading="lazy">
-          <figcaption>One blueprint drives copy, assessment, prototype or code, and the Figma design, all from the same foundation.</figcaption>
+        <h3>The idea: write it down once, as a skill</h3>
+        <p>A skill is a Markdown file that an AI tool loads before it starts working. Ours holds the rules we'd learned from designing across channels, in four layers: UX, UI, behaviour and content. That covers how tokens work, how each component behaves, and how error, loading and empty states show up. Load the skill in the sandbox, and the tool builds the way our team would, instead of guessing.</p>
+        <figure class="bp-skill" aria-label="The layers of the skill, simplified">
+          <p class="bp-skill-bar"><span aria-hidden="true"></span>blueprint/SKILL.md</p>
+          <ol>
+            <li><b># UX</b>Wireframes at low and high fidelity, with placeholder copy, so structure gets agreed before polish.</li>
+            <li><b># UI</b>Templates and patterns, components and fields, and the tokens under them: colour, shaping, shadows and typography.</li>
+            <li><b># Behaviour</b>Feedback, loading, navigation, and where iOS and Android differ, like where the save button goes.</li>
+            <li><b># Content</b>Tone, vocabulary and compliance; formatting for currency, dates, times and products; CTAs, errors and helper text.</li>
+          </ol>
+          <figcaption>The four layers of the skill, simplified. Each is a set of rules the AI follows when it builds a screen.</figcaption>
+        </figure></figure>
+
+        <h3>How a request moves through the system</h3>
+        <p>A brief, a prompt or a rough sketch becomes a <b>blueprint</b>, a structured description of the screen. Copy, assessments, a prototype or code, and the Figma design all come from that one blueprint, and every output is built on the same tokens, patterns and rules.</p>
+        <figure class="bp-diagram bp-flow">
+          <div class="bp-flow-grid">
+            <div class="bp-flow-in">
+              <p class="bp-dlabel">Start with</p>
+              <ul class="bp-chips"><li>A prompt</li><li>A brief</li><li>A rough idea</li><li>A sketch</li></ul>
+            </div>
+            <p class="bp-arrow" aria-hidden="true"><span>Author</span></p>
+            <div class="bp-flow-core">
+              <p class="bp-node bp-node--key"><b>Blueprint</b><span>A structured description of the screen</span></p>
+              <p class="bp-loop"><span aria-hidden="true">↻</span> Revise until it's right</p>
+            </div>
+            <p class="bp-arrow" aria-hidden="true"><span>Emit</span></p>
+            <ul class="bp-flow-out">
+              <li class="bp-node"><b>Prototype or code</b><span>Changes made here are documented back</span></li>
+              <li class="bp-node"><b>Figma design</b><span>Changes made here are documented back</span></li>
+              <li class="bp-node"><b>Copy</b><span>Then translations</span></li>
+              <li class="bp-node"><b>Assessments</b><span>Of the design and of the copy</span></li>
+            </ul>
+          </div>
+          <p class="bp-foundation"><span class="bp-dlabel">Every output is built on</span><span>Tokens</span><span>Design system</span><span>Patterns</span><span>Rules</span></p>
+          <figcaption>One blueprint drives the prototype or code, the Figma design, the copy and the assessments, all from the same foundation.</figcaption>
         </figure>
+
+        <h3>A blueprint is a recipe for a screen</h3>
+        <p>Every blueprint follows the same recipe, so a person or a tool can read it the same way. It starts with the biggest decision, whether this is a page or a modal, then breaks the screen down into sections and cards, and each of those into fields with a title, subtitle and helper.</p>
+        <figure class="bp-diagram bp-recipe">
+          <div class="bp-nest bp-nest--page">
+            <p class="bp-nest-l">Page or modal <span>Primary or secondary</span></p>
+            <div class="bp-nest">
+              <p class="bp-nest-l">Section</p>
+              <div class="bp-nest bp-nest--field"><p class="bp-nest-l">Field</p><p class="bp-parts"><span>Title</span><span>Subtitle</span><span>Helper</span></p></div>
+              <div class="bp-nest bp-nest--field"><p class="bp-nest-l">Field</p><p class="bp-parts"><span>Title</span><span>Child</span></p></div>
+            </div>
+            <div class="bp-nest">
+              <p class="bp-nest-l">Card</p>
+              <div class="bp-nest bp-nest--field"><p class="bp-nest-l">Field</p><p class="bp-parts"><span>Title</span><span>Subtitle</span></p></div>
+            </div>
+          </div>
+          <figcaption>The recipe: page or modal, then sections and cards, then fields.</figcaption>
+        </figure></figure>
       </section>
 
       <section class="act" id="work-act" aria-labelledby="work-title">
         <header class="act-head"><p class="label">Act III</p><h2 id="work-title">The <em>work.</em></h2></header>
 
-        <h3 id="colour">A colour system named for the job, not the shade</h3>
+        <h3 id="colour">The layer I owned: colour, named for the job, not the shade</h3>
         <p>Rather than invent a token system from scratch, I built on Material Design 3's architecture: roles like <i>surface</i>, <i>on surface</i> and <i>primary container</i>, instead of names tied to a specific colour. One role name works in both modes; the theme decides the value, so nobody re-derives it screen by screen.</p>
         <p>In Cursor, I wrote this down as a structured 45-role colour system and generated Figma variables directly from it, with light and dark mode bound to the same role names. In dark mode, Tim Hortons primary becomes yellow, not red, and every screen follows without being redrawn.</p>
         <figure class="cs-figure cs-figure--wide bp-modes">
@@ -155,7 +227,7 @@
             <button type="button" data-mode="dark" aria-pressed="false">Dark</button>
           </div>
           <div class="bp-modes-frame" data-show="light">
-            <img class="bp-mode bp-mode--light" src="../assets/img/work/blueprint/roles-light.jpg?v=9925047f" alt="Colour roles in light mode: primary is Tim Hortons red, surfaces are warm off-whites" width="1600" height="794" loading="lazy">
+            <img class="bp-mode bp-mode--light" src="../assets/img/work/blueprint/roles-light.jpg?v=8c8ec426" alt="Colour roles in light mode: primary is Tim Hortons red, surfaces are warm off-whites" width="1600" height="794" loading="lazy">
             <img class="bp-mode bp-mode--dark" src="../assets/img/work/blueprint/roles-dark.jpg?v=297b8b4d" alt="The same colour roles in dark mode: primary becomes yellow, surfaces become deep coffee browns" width="1600" height="789" loading="lazy">
           </div>
           <figcaption>The same 45 role names in light and dark mode. Switch between them: only the values change.</figcaption>
@@ -165,57 +237,105 @@
         <p>AI-generated tokens still need a designer's eye. Testing the system against real screens surfaced gaps the automation missed, and the clearest was the toggle switch: the first pass didn't treat the off-state track correctly, so the switch almost disappeared on dark surfaces.</p>
         <p>I went back to Material 3's own switch anatomy, then tested seven stroke candidates against the same track, checking contrast and whether each one stayed on-palette. The working pair was <b>surface container highest</b> as the track fill and <b>outline</b> as the stroke, at 5.6:1 against the track, in both light and dark mode.</p>
         <figure class="cs-figure cs-figure--wide">
-          <img src="../assets/img/work/blueprint/toggle.jpg?v=97b9e877" alt="Seven toggle switch cards on a dark background, each testing a different stroke colour for the off-state track, with contrast ratios. The outline token at 5.6 to 1 is marked as the Material 3 default; others are labelled too faint, warm but weak, too loud, reference only, Tim Hortons alternative and off-palette." width="1600" height="1145" loading="lazy">
+          <img src="../assets/img/work/blueprint/toggle.jpg?v=e782499c" alt="Seven toggle switch cards on a dark background, each testing a different stroke colour for the off-state track, with contrast ratios. The outline token at 5.6 to 1 is marked as the Material 3 default; others are labelled too faint, warm but weak, too loud, reference only, Tim Hortons alternative and off-palette." width="1600" height="1145" loading="lazy">
           <figcaption>Seven stroke candidates for the off-state track, each with its contrast against the track fill. Outline, top left, was the one that held up.</figcaption>
         </figure>
         <p class="pull">Generated isn't the same as designed.</p>
 
-        <h3>Rules for structure, not just colour</h3>
-        <p>Tokens define what a colour does. A second layer of rules defines how content and controls are arranged. With another designer, I wrote a first pass of layout and component guidance, and with a copywriter, content rules for consistent microcopy.</p>
-        <ul class="wip">
-          <li><b>Layout</b>Surface hierarchy, sections, page padding and margins, grids and scroll behaviour.</li>
-          <li><b>Fields and controls</b>Text, link, action, input, checkbox, radio, toggle, stepper and segmented control.</li>
-          <li><b>Feedback and loading</b>When to use alerts, modals or sheets; skeletons versus spinners; busy states and lost connectivity.</li>
-          <li><b>App patterns</b>Page headers, sticky footers, keyboards, navigation stacks, back behaviour and form validation.</li>
-        </ul>
-        <figure class="cs-figure cs-figure--wide">
-          <img src="../assets/img/work/blueprint/rules.jpg?v=f7d3914d" alt="The guidance checklist: feedback, loading states, navigation, layout, fields and UI on the left; page headers, footers, keyboards, navigation bar, back behaviour and forms on the right" width="1600" height="1104" loading="lazy">
-          <figcaption>The scope of the rules: what a generated screen has to get right beyond colour.</figcaption>
-        </figure>
-        <p>These rules were written but not yet tested against real screens. That would have been the next validation pass, using the same method that caught the toggle: apply the rule, build a real screen with it, fix what doesn't hold up.</p>
+        <h3>Rules for everything beyond colour</h3>
+        <p>Tokens define what a colour does. The rest of the skill defines how content and controls behave. With another designer, I turned our past design work into layout, component and state rules, and with a copywriter, content rules for consistent microcopy.</p>
+        <div class="bp-rules">
+          <section><h4>Feedback</h4><ul><li>Native alerts, modals or form sheets: when to use each</li><li>Modern feedback in place of toast messages</li><li>Confirm on destructive actions, or on dismiss</li><li>When a message should appear as an error</li></ul></section>
+          <section><h4>Loading</h4><ul><li>Skeletons or spinners</li><li>Busy states on buttons, and the rest of the form while busy</li><li>Optimistic updates with rollback</li><li>Low connectivity versus lost connectivity</li></ul></section>
+          <section><h4>Navigation</h4><ul><li>Screen or modal</li><li>Nested modals within a stack</li><li>How screen flows and modal flows work</li><li>Back on iOS and Android, including gestures</li></ul></section>
+          <section><h4>Layout</h4><ul><li>Surface hierarchy and sections</li><li>Page padding, margins and grids</li><li>Scroll behaviour</li><li>Sticky CTAs and page footers per platform</li></ul></section>
+          <section><h4>Fields and controls</h4><ul><li>Text, link, action and input fields</li><li>Checkbox, radio, toggle, stepper, segmented control</li><li>Badges, dots and unread counts</li><li>Validation on blur or on submit, and auto-fill</li></ul></section>
+          <section><h4>Platform and access</h4><ul><li>Haptics, shadows and animation</li><li>Safe areas and permissions</li><li>Font scaling</li><li>Alt text</li></ul></section>
+        </div>
+        <p>We refine the rules the same way I fixed the toggle: build a real screen with the skill, look at what it got wrong, and tighten the rule that let it happen.</p>
 
-        <h3 id="intake">A front door for screen requests</h3>
-        <p>The tokens decide what a screen looks like. The intake decides how a request is structured before anyone opens Figma. I designed it as a guided wizard backed by a single catalogue of journeys and screens.</p>
-        <div class="bp-split">
-          <div>
-            <p>Instead of a designer, or an AI agent, guessing at modal versus push, the navigation title or which controls apply, the system infers them from the catalogue after a few branching questions: is this an existing flow or a new one, what should the guest get done, and where does it live in the app?</p>
-            <p>The output defaults to a <b>wireframe first</b>. High fidelity and code or Figma generation are later, opt-in steps, because polish that arrives too early hides the wrong structural decisions.</p>
-            <p>The same intake runs in Cursor chat and in a browser preview, so one set of logic serves both AI-agent work and manual design work.</p>
+        <h3 id="intake">From a few questions to a prototype</h3>
+        <p>When someone asks for a screen, the hardest part is working out what they actually need. I'd always done that with a series of questions, so I turned my own workflow into the skill's front door: a guided intake backed by a catalogue of journeys and screens.</p>
+        <p>Instead of a designer, or an AI agent, guessing at modal versus push, the navigation title or which controls apply, the skill infers them from the catalogue after a few branching questions.</p>
+        <figure class="bp-diagram bp-q">
+          <ol class="bp-q-trunk">
+            <li>What are you building today?</li>
+            <li class="bp-q-decide">Existing flow, or new?</li>
+          </ol>
+          <div class="bp-q-branches">
+            <ol class="bp-q-branch">
+              <li class="bp-q-tag">Existing</li>
+              <li>Pick the journey area, then the screen</li>
+              <li class="bp-q-decide">Customising an item?</li>
+              <li class="bp-q-opt">If yes, add the product name</li>
+            </ol>
+            <ol class="bp-q-branch">
+              <li class="bp-q-tag">New</li>
+              <li>What should the guest get done?</li>
+              <li>Where does it live in the app?</li>
+              <li>What's the primary action when they're done?</li>
+            </ol>
           </div>
-          <figure class="cs-figure bp-intake">
-            <img src="../assets/img/work/blueprint/intake.jpg?v=1f902353" alt="Intake flowchart: What are you building today? Existing flow or new? Existing leads to journey area and screen pick, then customize item. New leads to guest outcome, where it lives in the app, and primary action. Both lead to an inferred proposal, confirm once, and generate the blueprint file." width="900" height="1618" loading="lazy">
-            <figcaption>The intake: a few questions, one inferred proposal, one confirmation.</figcaption>
-          </figure>
+          <ol class="bp-q-trunk bp-q-trunk--end">
+            <li class="bp-q-ai">A proposal, inferred from the catalogue</li>
+            <li>Confirm once</li>
+            <li class="bp-q-key">Blueprint, then a first prototype</li>
+          </ol>
+          <figcaption>The intake: a few questions, one inferred proposal, one confirmation, then a prototype.</figcaption>
+        </figure>
+        <p>The answers go to the skill, which builds a <b>first prototype</b> in the sandbox from our real tokens and components. It isn't perfect, but it's close enough to react to, and that's the point: the conversation starts from a screen, not a blank page.</p>
+        <p>The same intake runs in Cursor chat and in a browser preview, so one set of logic serves both AI-assisted work and manual design work.</p>
+
+        <h3>Design, shipped like code</h3>
+        <p>The skills live where the code lives: in their own branch of the app's repository. Designers and our copywriter work on their own machines, commit changes, and open a pull request, so every change to a rule gets reviewed before it reaches the main branch, just like a change to the app.</p>
+        <figure class="bp-diagram bp-git">
+          <ol>
+            <li><span class="bp-dlabel">On my computer</span><b>Edit a rule</b><span>Commit the change</span></li>
+            <li><span class="bp-dlabel">Push</span><b>Design-skills branch</b><span>Shared with the team</span></li>
+            <li><span class="bp-dlabel">Pull request</span><b>Review</b><span>The right people sign off</span></li>
+            <li class="bp-git-main"><span class="bp-dlabel">Merge</span><b>Main</b><span>Everyone builds from it</span></li>
+          </ol>
+          <figcaption>Rules change the way code does: in a branch, through review, then into main.</figcaption>
+        </figure>
+
+        <h3 id="components">Components the skill can build with</h3>
+        <p>A skill is only as good as the parts it can reach for. Alongside the rules, I built components for our new design system, so the skill assembles real, documented pieces instead of approximations: foundations, fields, pickers, buttons, page chrome and feedback, then patterns and screens on top.</p>
+        <figure class="cs-figure cs-figure--wide">
+          <img src="../assets/img/work/blueprint/system-index.jpg?v=d1bd1fb7" alt="TH Blueprint design system index: Foundations (colour, typography, layout and spacing, shapes and elevation), Components (fields, pickers, buttons, chrome, feedback) and Patterns and screens (auth form, settings list, product customization, confirmation, empty state, sign in, account)" width="1440" height="640" loading="lazy">
+          <figcaption>The design system's index: foundations, components, and the patterns and screens built from them.</figcaption>
+        </figure>
+        <div class="bp-lock" data-lock="design-system-ai">
+          <div class="bp-lock-gate">
+            <p class="label">Not public yet</p>
+            <p class="bp-lock-title">The new components</p>
+            <p>The new design system hasn't launched, so these screens are password-protected. If you'd like to see them, <a href="#contact">ask me for the password</a>.</p>
+            <form class="bp-lock-form">
+              <label for="lock-pw">Password</label>
+              <span class="bp-lock-row"><input id="lock-pw" type="password" autocomplete="off" required><button type="submit">Unlock</button></span>
+              <p class="bp-lock-msg" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+          <div class="bp-lock-content" hidden></div>
         </div>
 
         <h3>From blueprint to screen</h3>
-        <p>To see whether the pieces held together, I built an HTML prototype with screen-building and test-screen views. Each example blueprint renders in a fixed iPhone-sized frame next to its spec, with every region of the screen mapped to its blueprint control, its code component and its catalogue entry, and previewable in its default, error and submitting states.</p>
-        <figure class="cs-figure cs-figure--wide">
-          <img src="../assets/img/work/blueprint/test-screen.jpg?v=122670d9" alt="The test screens view: a Sign in screen generated from a blueprint, with default, error and submitting states, next to its blueprint spec and a table mapping each screen region to blueprint control, code component and catalogue doc" width="1600" height="1082" loading="lazy">
-          <figcaption>A sign-in screen rendered from its blueprint, with the spec that produced it.</figcaption>
+        <p>To check the pieces hold together, I built test screens: everyday flows like sign in, sign-in errors, account, joining and customising a coffee, each built from its blueprint with our tokens and components. Each one renders next to its spec, with every region mapped to its blueprint control, code component and catalogue entry, so engineers see exactly what to build.</p>
+        <figure class="cs-figure cs-figure--wide bp-tests">
+          <img src="../assets/img/work/blueprint/test-screens.jpg?v=7335d47e" alt="Blueprint test screens: Sign in, Sign in with an error message and an invalid email, Account with Tims Rewards, Join now with a disabled button, and a Coffee product screen with size and milk options" width="1025" height="1510" loading="lazy">
+          <figcaption>Test screens built from blueprints: default, error and disabled states included.</figcaption>
         </figure>
         <dl class="bp-owned">
           <div><dt>I owned</dt><dd><ul>
             <li>The colour system and Figma variables</li>
-            <li>The intake: existing versus new, and the journey catalogue</li>
-            <li>The wireframe-first deliverable model</li>
+            <li>The intake: my question flow, and the journey catalogue behind it</li>
+            <li>Components for the new design system</li>
             <li>The folder structure for the design repo</li>
             <li>The HTML prototype: screen building and test screens</li>
           </ul></dd></div>
           <div><dt>I collaborated on</dt><dd><ul>
-            <li>Layout and component rules, with another designer</li>
+            <li>The skill's layout, component and state rules, with another designer</li>
             <li>Content rules, with a copywriter</li>
-            <li>The blueprint schema and CI, with engineering</li>
+            <li>The blueprint schema and front-end handoff, with engineering</li>
             <li>Design-system handoff documentation in Figma</li>
           </ul></dd></div>
         </dl>
@@ -225,21 +345,22 @@
         <header class="act-head"><p class="label">Learnings</p><h2 id="learnings-title">What I'm <em>taking with me.</em></h2></header>
         <ol class="learnings">
           <li><b>Design-systems work starts before the components.</b> Designing how a request enters the system mattered as much as the tokens it ends up using.</li>
+          <li><b>Write down what designers know.</b> Most of the skill wasn't new thinking. It was decisions from our past design work, finally written down where a tool could use them.</li>
           <li><b>AI needs constraints to be useful.</b> A catalogue and inferred rules gave the tools something to reason with. Open-ended prompts gave them room to guess.</li>
           <li><b>Test in context, not on a grid.</b> The toggle looked fine as a swatch. It only failed on a real screen, and a designer's eye is what caught it.</li>
         </ol>
       </section>
 
       <section class="act" id="next" aria-labelledby="next-title">
-        <header class="act-head"><p class="label">Where it stands</p><h2 id="next-title">Paused, <em>not finished.</em></h2></header>
-        <p>The work paused before it went into production. The system lived in its own design repo, separate from engineering's codebase. The next steps would have been:</p>
+        <header class="act-head"><p class="label">What's next</p><h2 id="next-title">In use, <em>still evolving.</em></h2></header>
+        <p>The skill still gets things wrong, and every generated screen gets a designer's review. But each mistake now improves a rule, instead of being fixed once and forgotten. What we're focused on next:</p>
         <ul class="wip">
-          <li><b>One source of truth</b>Merge the design and engineering repos, so both sides build from the same files, not parallel copies.</li>
-          <li><b>Test the rules</b>Run the layout and component rules against real screens, the way the colour system was tested.</li>
+          <li><b>Test more rules</b>Run every layout and component rule against real screens, the way the colour system was tested.</li>
           <li><b>More golden paths</b>Expand the scenarios that generated screens are checked against.</li>
           <li><b>A prompt in the room</b>Product, design and engineering react to a rough generated screen together, instead of waiting days for a first mock.</li>
+          <li><b>Room for hero moments</b>The scan screen, the homepage and rewards are one-offs that deserve bespoke design. The question we're working through: how do we use the same tools to break some rules, but follow others?</li>
         </ul>
-        <p class="goal">The intake turns a brief into structure. The tokens turn structure into something that looks and feels like Tim Hortons.</p>
+        <p class="goal">The intake turns a request into structure. The skill turns structure into something that looks, works and feels like Tim Hortons.</p>
       </section>
 
       <nav class="pager pager--two" aria-label="More work">
@@ -258,6 +379,17 @@
   <div class="site-footer"><div class="wrap"><span>© 2026 Anvita Sodhi</span><span>Designed and built by me.</span></div></div>
 </footer>
 <script>
+document.querySelectorAll('.bp-live').forEach(function (fig) {
+  var btn = fig.querySelector('.bp-live-toggle'), label = fig.querySelector('.bp-live-label'), timer;
+  function set(mode) {
+    fig.dataset.mode = mode;
+    btn.setAttribute('aria-checked', String(mode === 'dark'));
+    label.textContent = mode === 'dark' ? 'Dark' : 'Light';
+  }
+  function flip() { set(fig.dataset.mode === 'dark' ? 'light' : 'dark'); }
+  btn.addEventListener('click', function () { clearInterval(timer); flip(); });
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) timer = setInterval(flip, 3200);
+});
 document.querySelectorAll('.bp-modes').forEach(function (fig) {
   var frame = fig.querySelector('.bp-modes-frame');
   fig.querySelectorAll('[data-mode]').forEach(function (b) {
@@ -265,6 +397,26 @@ document.querySelectorAll('.bp-modes').forEach(function (fig) {
       frame.dataset.show = b.dataset.mode;
       fig.querySelectorAll('[data-mode]').forEach(function (o) { o.setAttribute('aria-pressed', String(o === b)); });
     });
+  });
+});
+document.querySelectorAll('[data-lock]').forEach(function (box) {
+  var form = box.querySelector('form'), msg = box.querySelector('.bp-lock-msg'), out = box.querySelector('.bp-lock-content');
+  function b64(s) { return Uint8Array.from(atob(s), function (c) { return c.charCodeAt(0); }); }
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    var btn = form.querySelector('button'); btn.disabled = true; msg.textContent = 'Unlocking…';
+    try {
+      var d = await (await fetch('../assets/locked/' + box.dataset.lock + '.json')).json();
+      var pw = new TextEncoder().encode(form.querySelector('input').value.normalize('NFC'));
+      var base = await crypto.subtle.importKey('raw', pw, 'PBKDF2', false, ['deriveKey']);
+      var key = await crypto.subtle.deriveKey({ name: 'PBKDF2', salt: b64(d.salt), iterations: d.iter, hash: 'SHA-256' }, base, { name: 'AES-GCM', length: 256 }, false, ['decrypt']);
+      var html = new TextDecoder().decode(await crypto.subtle.decrypt({ name: 'AES-GCM', iv: b64(d.iv) }, key, b64(d.data)));
+      out.innerHTML = html; out.hidden = false; box.querySelector('.bp-lock-gate').hidden = true; box.classList.add('is-open');
+      if (window.zoomWire) out.querySelectorAll('img').forEach(window.zoomWire);
+    } catch (err) {
+      msg.textContent = "That password didn't work. Try again, or ask me for it.";
+      btn.disabled = false;
+    }
   });
 });
 </script>
