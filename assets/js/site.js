@@ -93,7 +93,7 @@
 
 /* click-to-expand images in case studies; before/after pairs open together */
 (function () {
-  var imgs = document.querySelectorAll('.cs-figure img');
+  var imgs = document.querySelectorAll('.cs-figure img:not(.gm-proto-img)');
   if (!imgs.length || typeof HTMLDialogElement === 'undefined') return;
   var dlg = document.createElement('dialog');
   dlg.className = 'lightbox';

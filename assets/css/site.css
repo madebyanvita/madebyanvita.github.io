@@ -1593,3 +1593,109 @@ body { transition: background-color .4s var(--ease), color .4s var(--ease); }
   .ds-row .ds-tile:only-child { flex-basis: 100%; }
   .ds-tile img { max-height: 30rem; object-fit: contain; }
 }
+
+/* Global Money Transfer (BMO): hero screens, and the add-contact flow as a stepper */
+.gm-hero img { border-radius: .6rem; box-shadow: 0 1.5rem 3rem -1.5rem rgb(36 35 33 / .3); }
+.gm-flow ol { display: grid; gap: 1.5rem; margin: 0; padding: 0; list-style: none; }
+.gm-flow ol > li { position: relative; display: grid; gap: .15rem; align-content: start; padding: .8rem .9rem; border: 1px solid var(--rule); border-radius: .5rem; background: var(--canvas); }
+.gm-flow ol > li > b { font: 400 var(--t-lg)/1.1 var(--font-display); }
+.gm-flow ol > li > span:not(.bp-dlabel) { font-size: var(--t-xs); color: var(--graphite-text); }
+.gm-flow .bp-dlabel { margin: 0; }
+.gm-flow .bp-chips { margin-top: .5rem; }
+.gm-flow .bp-chips li { padding: .25rem .6rem; }
+.gm-flow ol > li + li::before { content: ""; position: absolute; left: 1.5rem; bottom: 100%; height: 1.5rem; border-left: 1.5px solid var(--graphite); }
+.gm-flow .gm-flow-key { border-color: var(--lilac); background: color-mix(in srgb, var(--lilac) 32%, var(--canvas)); }
+@media (min-width: 60rem) {
+  .gm-flow ol { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1rem; }
+  .gm-flow ol > li + li::before { left: auto; right: 100%; bottom: auto; top: 1.6rem; width: 1rem; height: 0; border-left: 0; border-top: 1.5px solid var(--graphite); }
+}
+.cover--flat.cover--gmt { --cv-bg: #0B4F8A; }
+:root[data-theme="dark"] .cover--flat.cover--gmt { --cv-bg: #0A426F; }
+.gm-flow .bp-chips { gap: .3rem; }
+.gm-flow .bp-chips li { white-space: nowrap; font-size: .72rem; }
+@media (min-width: 60rem) { .gm-flow ol > li { padding: .75rem .7rem; } .gm-flow ol > li > b { font-size: var(--t-md, 1.15rem); } }
+.gm-answers { display: grid; gap: 0; margin: var(--s-3) 0 var(--s-4); border-top: 1px solid var(--rule); }
+.gm-answers div { display: grid; gap: .2rem .75rem; padding: .8rem 0; border-bottom: 1px solid var(--rule); }
+.gm-answers dt { font-size: var(--t-xs); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--graphite-text); }
+.gm-answers dd { margin: 0; font: 400 var(--t-lg)/1.2 var(--font-display); }
+@media (min-width: 44rem) { .gm-answers div { grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); align-items: baseline; } }
+.gm-map img { display: block; width: 100%; height: auto; border-radius: 12px; background: #fff; }
+.gm-top { align-items: start; }
+
+/* Global Money Transfer hero: a transfer flies from Canada to India while the card's status lands */
+.gm-live { display: grid; gap: 1rem; width: min(100%, 23rem); justify-self: center; margin: 0; }
+.gm-route { display: grid; grid-template-columns: auto 1fr auto; align-items: end; gap: .4rem; }
+.gm-place { display: grid; place-items: center; width: 3.6rem; height: 3.6rem; border-radius: 50%; background: var(--paper); border: 1px solid var(--rule); font: 800 .85rem/1 var(--font-ui); letter-spacing: .04em; }
+.gm-place small { display: block; margin-top: -.6rem; font: 500 .62rem/1 var(--font-ui); letter-spacing: 0; color: var(--graphite-text); }
+.gm-arc { width: 100%; height: auto; overflow: visible; margin-bottom: 1.4rem; }
+.gm-arc-line { fill: none; stroke: var(--graphite); stroke-width: 1.5; stroke-dasharray: 3 5; stroke-linecap: round; }
+.gm-plane circle { fill: var(--lilac); }
+.gm-plane path { fill: none; stroke: #242321; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.gm-card { padding: 1.1rem 1.2rem 1rem; border: 1px solid var(--rule); border-radius: 1.1rem; background: var(--canvas); box-shadow: 0 1.5rem 3rem -1.5rem rgb(36 35 33 / .35); font: 500 .85rem/1.3 var(--font-ui); }
+.gm-card-head { margin: 0 0 .7rem; font: 400 var(--t-lg)/1.1 var(--font-display); }
+.gm-card dl { margin: 0; display: grid; }
+.gm-card dl div { display: flex; justify-content: space-between; gap: 1rem; padding: .5rem 0; border-top: 1px solid var(--rule); }
+.gm-card dt { color: var(--graphite-text); }
+.gm-card dd { margin: 0; font-weight: 700; text-align: right; }
+.gm-card .gm-fee { margin-inline: -.5rem; padding-inline: .5rem; border-radius: .4rem; background: color-mix(in srgb, var(--lilac) 30%, transparent); }
+.gm-card .gm-get dd { font-size: 1rem; }
+.gm-status { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: .3rem .6rem; margin: .5rem 0 0; padding-top: .7rem; border-top: 1px solid var(--rule); }
+.gm-s { grid-area: 1 / 1; display: inline-flex; align-items: center; gap: .4rem; padding: .3rem .6rem; border-radius: 99rem; font: 800 .7rem/1 var(--font-ui); letter-spacing: .08em; text-transform: uppercase; background: var(--paper); }
+.gm-s i { width: .55rem; height: .55rem; border-radius: 50%; }
+.gm-s--prog i { background: #E9B10E; }
+.gm-s--done i { background: #2E8B57; }
+.gm-s--prog { opacity: 0; }
+.gm-status small { grid-area: 1 / 2; font-size: .72rem; color: var(--graphite-text); text-align: right; }
+@media (prefers-reduced-motion: no-preference) {
+  .gm-s--prog { animation: gm-prog 6s infinite; }
+  .gm-s--done { animation: gm-done 6s infinite; }
+  .gm-arc-line { animation: gm-march 1.2s linear infinite; }
+  .gm-s--done i { animation: gm-pop 6s infinite; }
+}
+@keyframes gm-prog { 0%, 54% { opacity: 1; } 58%, 100% { opacity: 0; } }
+@keyframes gm-done { 0%, 55% { opacity: 0; } 59%, 96% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes gm-pop { 0%, 56% { transform: scale(.4); } 62% { transform: scale(1.5); } 68%, 100% { transform: none; } }
+@keyframes gm-march { to { stroke-dashoffset: -8; } }
+/* Global Money Transfer cover: send pulses, a coin glides along the route, the globe hops, the tick pops */
+.cover-icon--gmt .g-coin { opacity: 0; }
+@media (prefers-reduced-motion: no-preference) {
+  .play .g-send  { animation: cv-pulse .5s ease-in-out both; }
+  .play .g-cx    { animation: g-x 1s linear .35s both; }
+  .play .g-cy    { animation: g-y 1s .35s both; }
+  .play .g-coin  { animation: g-coin 1s ease-in-out .35s both; }
+  .play .g-globe { animation: cv-hop .55s cubic-bezier(.34,1.56,.64,1) 1.3s both; }
+  .play .g-check { animation: cv-pop .45s cubic-bezier(.34,1.56,.64,1) 1.45s both; }
+}
+@keyframes g-x { from { transform: translateX(0); } to { transform: translateX(26px); } }
+@keyframes g-y {
+  0%   { transform: translateY(0); animation-timing-function: cubic-bezier(.33,1,.68,1); }
+  50%  { transform: translateY(-26px); animation-timing-function: cubic-bezier(.32,0,.67,0); }
+  100% { transform: translateY(-20px); }
+}
+@keyframes g-coin { 0% { opacity: 0; transform: scale(.4); } 15% { opacity: 1; transform: scale(1); } 80% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(.5); } }
+
+/* Global Money Transfer: a clickable prototype in a phone frame */
+.gm-proto-stage { display: grid; gap: var(--s-3); align-items: center; }
+@media (min-width: 44rem) { .gm-proto-stage { grid-template-columns: 18rem minmax(0, 1fr); gap: var(--s-4); } }
+.gm-proto-device { width: min(100%, 18rem); }
+.gm-proto-screen { position: relative; aspect-ratio: 750 / 1624; overflow-y: auto; overflow-x: hidden; border-radius: 36px; background: #F4F5F7; scrollbar-width: none; overscroll-behavior: contain; }
+.gm-proto-screen::-webkit-scrollbar { display: none; }
+.gm-proto-screen:focus-visible { outline: 2px solid var(--lilac); outline-offset: 3px; }
+.gm-proto-frame { position: relative; }
+.gm-proto-img { display: block; width: 100%; height: auto; }
+.gm-hot { position: absolute; border: 2px solid var(--lilac); border-radius: 12px; background: color-mix(in srgb, var(--lilac) 18%, transparent); cursor: pointer; padding: 0; }
+.gm-hot:focus-visible { outline: 3px solid #242321; outline-offset: 2px; }
+@media (prefers-reduced-motion: no-preference) { .gm-hot { animation: gm-glow 1.6s ease-in-out infinite; } }
+@keyframes gm-glow { 50% { box-shadow: 0 0 0 6px color-mix(in srgb, var(--lilac) 45%, transparent); } }
+.gm-proto-side { display: grid; gap: 1rem; align-content: center; }
+.gm-proto-steps { display: flex; flex-wrap: wrap; gap: .4rem; margin: 0; padding: 0; list-style: none; counter-reset: gmstep; }
+.gm-proto-steps button { font: 700 var(--t-xs)/1 var(--font-ui); letter-spacing: .08em; text-transform: uppercase; padding: .55rem .8rem; border-radius: 99rem; border: 1px solid var(--rule); background: var(--canvas); color: var(--ink); cursor: pointer; }
+.gm-proto-steps button[aria-current="step"] { background: var(--ink); color: var(--canvas); border-color: var(--ink); }
+.gm-proto-steps button:focus-visible, .gm-proto-restart:focus-visible { outline: 2px solid var(--lilac); outline-offset: 2px; }
+.gm-proto-note { margin: 0; min-height: 4.5em; font: 400 var(--t-lg)/1.3 var(--font-display); max-width: 30ch; }
+.gm-proto-restart { justify-self: start; font: 600 var(--t-sm)/1 var(--font-ui); padding: 0; border: 0; background: none; color: var(--ink); text-decoration: underline; text-underline-offset: .2em; cursor: pointer; }
+.gm-video { margin-top: var(--s-3); }
+.gm-video summary { cursor: pointer; font: 600 var(--t-sm)/1.4 var(--font-ui); text-decoration: underline; text-underline-offset: .2em; }
+.gm-video summary:focus-visible { outline: 2px solid var(--lilac); outline-offset: 3px; }
+.gm-video .video { margin-top: 1rem; }
+.gm-video p { font-size: var(--t-sm); }
